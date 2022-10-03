@@ -137,7 +137,6 @@ body {
   left: 100%;
   width: 100%;
   min-height: 100vh;
-  /* z-index: 98; */
   padding-top: 110px;
   transition: 0.4s;
 }
@@ -199,7 +198,7 @@ main {
 
 .heart {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .current-page {
