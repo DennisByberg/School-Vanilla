@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- font-family: 'Shadows Into Light', cursive; -->
+    <!-- font-family: 'Poiret One', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <script src="../scripts/script.js" defer></script>
+    <title>Holy Cats</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <div class="main-logo">
+          <img
+            class="cat-logo"
+            href="index.html"
+            src="../images/favicon.ico"
+            alt="catlogo"
+          />
+          <h2 class="holy-cats-logo-text">
+            <a href="../index.html">Holy<span class="cats-text">CATS</span></a>
+          </h2>
+          <button class="hamburger">
+            <div class="bar"></div>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="polka.html">POLKA</a></li>
+          <li><a href="kittens.html">KITTENS</a></li>
+          <li><a class="current-page" href="contact.html">CONTACT</a></li>
+        </ul>
+        <nav class="mobile-nav-links">
+          <a href="../index.html">HOME</a>
+          <a href="polka.html">POLKA</a>
+          <a href="kittens.html">KITTENS</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+    <img
+      class="light-background"
+      src="https://i.pinimg.com/originals/35/ae/d0/35aed02cd2e20bc3ce99a55d586eb83d.jpg"
+      alt=""
+    />
+    <main>
+      <form onsubmit="event.preventDefault(); validateForm()">
+        <h1>Contact us</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name" />
+        <small class="error"></small>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Your Email" />
+        <small class="error"></small>
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Your message" rows="6"></textarea>
+        <small class="error"></small>
+
+        <!-- Div klassen [center] är endast för att centrera "the sumbit button" -->
+        <div class="center">
+          <input type="submit" value="Send Message" />
+          <p id="success"></p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
