@@ -30,7 +30,7 @@
 
 .slideshow-container img {
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   max-height: 250px;
   box-shadow: 2px 2px 3px black;
   border-radius: 25px;
@@ -115,6 +115,13 @@
 
 /* ------------------ ||||| MEDIUM ||||| ------------------- */
 @media (max-width: 1200px) {
+  .slideshow-container img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 200px;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 25px;
+  }
 }
 
 /* ------------------ ||||| MOBILE ||||| ------------------- */

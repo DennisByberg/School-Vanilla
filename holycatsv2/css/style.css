@@ -207,10 +207,23 @@ main {
   background: rgba(255, 255, 255, 0);
 }
 
+.sign {
+  font-size: 16px;
+  color: white;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: "Poiret One", cursive;
+}
+
+.sign-name {
+  /* text-decoration: underline; */
+}
+
 /* ------------------ ||||| MEDIUM ||||| ------------------- */
 @media (max-width: 1200px) {
   .nav-links {
     font-size: 15px;
+    width: 60%;
   }
 
   .box h1 {
@@ -220,10 +233,14 @@ main {
   .box h3 {
     font-size: 15px;
   }
+
+  .sign {
+    font-size: 14px;
+  }
 }
 
 /* ------------------ ||||| MOBILE ||||| ------------------- */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .nav-bar {
     padding: 0;
     display: block;
@@ -257,5 +274,9 @@ main {
 
   .hero {
     padding-top: 0;
+  }
+
+  .sign {
+    font-size: 12px;
   }
 }
