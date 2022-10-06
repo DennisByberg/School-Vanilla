@@ -1,7 +1,4 @@
-/* Om inte denna finns så blir bakgrundfärgen på nav-baren mörkare... */
 .nav-bar {
-  /* background-image: url("https://www.xmple.com/wallpaper/brown-linear-gradient-grey-1920x1080-c2-d3d3d3-f5deb3-a-180-f-14.svg"); */
-  /* display: none; */
   background-color: rgba(0, 0, 0, 0.056);
 }
 

@@ -4,7 +4,6 @@ body {
 }
 
 .nav-bar {
-  /* background-image: url("https://www.xmple.com/wallpaper/brown-linear-gradient-grey-1920x1080-c2-d3d3d3-f5deb3-a-180-f-14.svg"); */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.13);
   background-color: rgba(61, 61, 61, 0.082);
 }
@@ -28,7 +27,6 @@ body {
 
 .kitten-image {
   width: 200px;
-  /* border: 2px solid black; */
   border-radius: 50px;
   box-shadow: 3px 3px 3px black;
 }
@@ -91,8 +89,4 @@ body {
   .box h1 {
     font-size: 50px;
   }
-}
-
-/* SMALL */
-@media (max-width: 600px) {
 }
