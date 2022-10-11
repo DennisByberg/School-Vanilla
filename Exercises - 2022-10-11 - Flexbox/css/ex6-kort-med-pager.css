@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Shadows Into Light", cursive;
 }
 
 body {
@@ -28,6 +27,7 @@ body {
   height: 400px;
   margin: auto;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.811);
+  font-family: "Shadows Into Light", cursive;
 }
 
 .dots-container {

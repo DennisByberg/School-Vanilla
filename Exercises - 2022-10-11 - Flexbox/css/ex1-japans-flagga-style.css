@@ -10,19 +10,20 @@ body {
 }
 
 .container {
+  width: 500px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 3px black;
+  margin: auto;
 }
 
 .item {
   width: 200px;
   height: 200px;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(196, 1, 1);
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
+  margin: 40px auto;
 }
