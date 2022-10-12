@@ -1,29 +1,30 @@
+/* Selector till alla element som vi implementerar */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   width: 100vw;
   height: 100vh;
 }
 
+/* Container av vårat item, vit bakgrund */
 .container {
   width: 500px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: white;
   box-shadow: 0 0 3px black;
   margin: auto;
 }
 
+/* Röda pricken i mitten */
 .item {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   background-color: rgb(196, 1, 1);
-  display: flex;
   border-radius: 50%;
-  margin: 40px auto;
+  margin: 60px auto;
 }
