@@ -9,39 +9,32 @@ body {
   height: 100vh;
 }
 
-.container {
+.nav-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  background-color: rgb(169, 169, 169);
+  justify-content: flex-end;
+  background-color: #eee;
   height: 40px;
 }
 
-.logo {
+.link {
+  margin: 1rem;
+  text-decoration: none;
+  color: #999;
+}
+
+.logo-image {
+  height: 50%;
   margin-right: auto;
-  font-weight: bolder;
+  margin-left: 1rem;
 }
 
-.zo {
-  font-size: 30px;
-}
-
-.com {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.login-btn {
-  border: 1px solid rgb(123, 123, 123);
-  padding: 5px 18px;
-  border-radius: 5px;
-  font-size: 14px;
+.btn {
   margin-left: auto;
-  margin-right: 20px;
-}
-
-li:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  margin-right: 1rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  appearance: none;
+  border: 1px solid #999;
+  border-radius: 0.25rem;
 }
