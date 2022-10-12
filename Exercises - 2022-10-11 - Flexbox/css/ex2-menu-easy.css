@@ -1,26 +1,35 @@
+/* Selector till alla element som vi implementerar */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-ul {
+.links-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(192, 192, 192);
-  height: 40px;
-}
-
-li {
+  width: 100vw;
+  height: 50px;
   list-style-type: none;
+  background-color: #eeeeee;
 }
 
-ul:hover {
-  cursor: pointer;
+.link {
+  text-decoration: none;
+  color: #424242;
 }
+
+.link:hover {
+  color: white;
+  background-color: #666666;
+}
+
+/* EXTRA UPPGIFT: */
+/* HUR FÅR JAG HOVER ATT TÄCKA ETT HELT LI ELEMENT?! */
