@@ -1,29 +1,30 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  background: rgb(248, 215, 255);
+  background: rgb(240, 164, 255);
   padding: 30px 0;
 }
 
 .calculator {
   max-width: 400px;
-  margin: 0 auto;
+  margin: auto;
   border: 2px solid black;
   border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.519);
+  background: rgb(232, 140, 251);
 }
 
-.calculator input {
-  background: none;
-  border: none;
+#display {
   box-shadow: none;
   width: 100%;
   border-bottom: 2px solid black;
   padding: 20px;
   text-align: right;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .calculator-buttons {
@@ -34,7 +35,7 @@ body {
   grid-gap: 15px;
 }
 
-.calc-button {
+.calc-btn {
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid black;
   padding: 20px;
@@ -42,17 +43,38 @@ body {
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 1px 1px 5px black;
 }
 
-.clear {
+.calc-btn:hover {
+  background: rgba(0, 0, 0, 0.759);
+}
+
+#clear-btn {
   grid-column: span 3;
   background-color: rgb(255, 139, 133);
 }
 
-.zero {
+#zero-btn {
   grid-column: span 3;
 }
 
-.equals {
-  background-color: rgb(15, 255, 15);
+#equals-btn {
+  background-color: rgb(75, 255, 75);
+}
+
+#clear-btn:hover {
+  background-color: rgb(253, 116, 109);
+}
+
+#equals-btn:hover {
+  background-color: rgb(43, 250, 43);
+}
+
+#db-sign {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 2em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
 }
