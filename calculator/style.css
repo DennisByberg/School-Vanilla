@@ -34,6 +34,10 @@ body {
   background-color: rgb(43, 250, 43);
 }
 
+.calc-btn:hover {
+  background: rgba(0, 0, 0, 0.759);
+}
+
 /* ━━━━━━━━━━━━| MAIN |━━━━━━━━━━━ */
 .calculator {
   max-width: 400px;
@@ -70,10 +74,6 @@ body {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 1px 1px 5px black;
-}
-
-.calc-btn:hover {
-  background: rgba(0, 0, 0, 0.759);
 }
 
 #clear-btn {
