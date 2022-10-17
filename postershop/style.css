@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Fira Sans;
 }
 
 body {
@@ -10,8 +11,7 @@ body {
 
 header {
   background-color: #3de07e;
-  width: 100%;
-  height: 400px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,9 +19,7 @@ header {
 }
 
 header h1 {
-  font-family: "Roboto";
-  font-size: 5vw;
-  text-align: center;
+  font-size: 7vw;
 }
 
 nav {
@@ -30,12 +28,11 @@ nav {
 }
 
 main {
-  background: black;
   display: grid;
   grid-template-columns: repeat(3, minmax(9rem, 1fr));
-  /* grid-template-rows: repeat(3, 1fr); */
   max-width: 999px;
   margin: 2rem auto;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -124,7 +121,6 @@ section h1 {
   padding: 16px;
 }
 section p {
-  /* border: 2px solid black; */
   background: white;
   color: black;
   font-family: "Fira Sans";
@@ -135,7 +131,6 @@ section p {
   margin: 0 2rem;
 }
 figure {
-  /* margin: 0; */
   padding: 16px;
 }
 
@@ -152,9 +147,7 @@ section button {
 }
 
 section img {
-  /* height: ; */
   width: 100%;
-  /* max-width: 312px; */
   margin: 0 auto;
 }
 
