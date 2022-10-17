@@ -1,0 +1,28 @@
+2. Byt namn på Home till Start.
+
+3. Byt namn på Contact till Mail Us.
+
+4. Byt ut informationen om Sinus Hoodie - Fire.
+
+5. Byt bakgrundsfärg och text på en knapp.
+
+Tips
+6. Byt bakgrundsfärg på någon av produkterna.
+
+7. Byt ut adressen på sidan.
+
+8. Byt färg på samtliga <p>.
+
+Tips
+9. Ändra text på samtliga knappar till add to cart.
+
+10. Lägg till classen active på menyalternativet home.
+
+Tips
+11. Ta bort classen logo på logotypen.
+
+Tips
+Events
+14. Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
+
+15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
