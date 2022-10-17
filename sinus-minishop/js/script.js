@@ -53,5 +53,14 @@ let headerLogo = document.querySelector("header img");
 headerLogo.classList.remove("logo");
 
 // 14. Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
+headerLogo.addEventListener("click", () => {
+  console.log("Found you");
+});
 
 // 15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
+let allArticles = document.querySelectorAll("article > h3");
+allArticles.forEach((e) => {
+  e.addEventListener("click", () => {
+    console.log(`Hi, im article ${e.innerText}`);
+  });
+});
