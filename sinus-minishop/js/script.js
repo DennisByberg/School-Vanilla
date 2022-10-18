@@ -59,6 +59,7 @@ headerLogo.addEventListener("click", () => {
 
 // 15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
 let allArticles = document.querySelectorAll("article h3");
+console.log(allArticles);
 allArticles.forEach((e) => {
   e.addEventListener("click", () => {
     console.log(`Hi, im article ${e.innerText}`);
