@@ -1,0 +1,47 @@
+/* ━━━━━━━━━━| DEFAULT |━━━━━━━━━━ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(60, 60, 60);
+  margin-top: 30vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.guess-number-txt {
+  color: white;
+  text-shadow: 0 0 10px rgb(255, 238, 80);
+}
+
+.amount-of-guesses-txt {
+  color: yellow;
+}
+
+button {
+  padding: 1rem 6rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.596);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(253, 255, 130, 0.577);
+}
+
+input {
+  padding: 1rem 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
