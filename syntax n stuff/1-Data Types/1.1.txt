@@ -1,0 +1,9 @@
+What data types are there in JS?
+
+Answer ~>
+the 5 most common data types in JS are:
+- string
+- number
+- boolean
+- undefined
+- null

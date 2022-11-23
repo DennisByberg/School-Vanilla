@@ -1,0 +1,5 @@
+In the following code, what is the block that is executed?
+
+el.on('click', () => {
+    alert('Ariba!');     <~~ THIS
+}

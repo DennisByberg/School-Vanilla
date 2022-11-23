@@ -1,0 +1,8 @@
+Which of the following syntax is the correct way to write strings?
+
+"Hello World" // A
+'Hello World' // B
+`Hello World` // C
+
+Answer ~>
+All 3 are absolutely right depending on what you prefer. However, backticks are good when you want to concatenate a string.
