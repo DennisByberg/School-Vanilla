@@ -1,0 +1,28 @@
+/* ━━━━━━━━━━| DEFAULT |━━━━━━━━━━ */
+
+body {
+  background-color: rgb(40, 40, 40);
+  text-align: center;
+  color: wheat;
+}
+
+h1 {
+  margin: 5rem 0;
+}
+
+a {
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 0 3px white;
+  background-color: rgb(35, 35, 35);
+  cursor: pointer;
+}
+
+a:hover {
+  box-shadow: 0 0 10px white;
+  background-color: rgb(30, 30, 30);
+}
