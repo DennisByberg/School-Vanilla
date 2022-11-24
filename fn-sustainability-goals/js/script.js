@@ -5,7 +5,9 @@ async function getGoals() {
   try {
     const resp = await fetch(`${URL}/v1/sdg/Goal/List`);
     const data = await resp.json();
-    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].title);
+    }
 
     return data;
   } catch (err) {
