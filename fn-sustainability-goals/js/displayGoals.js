@@ -1,5 +1,7 @@
 import { data } from "./api.js"; // Data = API-List
 
+// /v1/dgs / Goal / { goalCode } / Target / List;
+
 const ul = document.querySelector("main ul");
 let userChoice = null;
 
@@ -26,7 +28,24 @@ async function displayAllGoals() {
       userChoice = parseInt(x.target.innerHTML);
 
       allGoals.forEach((x) => {
-        console.log(typeof x.code);
+        // Hantera allt som är under 10...
+        if (userChoice < 10) {
+          if (userChoice == x.code[0] && x.code[1] == ".") {
+            const liEl = `
+            <li>${x.code}</li>
+            `;
+            ul.insertAdjacentHTML("beforeend", liEl);
+          }
+        } else {
+          const copyOfUserChoice = userChoice.toString();
+          const secondNumber = copyOfUserChoice.slice(1);
+          if (secondNumber == x.code[1]) {
+            const liEl = `
+            <li>${x.code}</li>
+            `;
+            ul.insertAdjacentHTML("beforeend", liEl);
+          }
+        }
       });
     });
   });
