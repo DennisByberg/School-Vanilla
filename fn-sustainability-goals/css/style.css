@@ -14,78 +14,82 @@
 }
 
 body {
+  /* FLEX-SETTINGS */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* ^FLEX-SETTINGS^ */
+
   height: 100vh;
   width: 100vw;
+
+  /* COLORS */
   background: rgb(30, 30, 30);
-  overflow-x: hidden;
 }
 
 header {
+  /* FLEX-SETTINGS */
   display: flex;
   position: fixed;
-  top: 0;
-  left: 0;
   align-items: center;
   justify-content: center;
-  /* ^FLEX-SETTINGS^ */
+
+  top: 0;
   width: 100%;
   height: 7rem;
-  background: linear-gradient(to top, rgb(30, 30, 30), rgb(40, 40, 40));
   user-select: none;
+
+  /* COLORS */
+  background: linear-gradient(to top, rgb(30, 30, 30), rgb(40, 40, 40));
 }
 
 header h1 {
-  display: flex;
-  /* ^FLEX-SETTINGS^ */
   font-family: "Josefin Slab", serif;
-  font-weight: 400;
+  font-weight: 500;
   margin-right: 0.5rem;
   padding-bottom: 0.4rem;
+
+  /* COLORS */
   text-shadow: 0 0 10px rgb(0, 0, 0);
   border-bottom: 1px solid rgba(255, 255, 255, 0.429);
   color: var(--unitedNationsBlue);
 }
 
+/* FN FLAG */
 header img {
   height: 3rem;
   width: 3rem;
 }
 
 main {
-  user-select: none;
   width: 100%;
   margin-bottom: 6rem;
   margin-top: 7.1rem;
   overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-main ul {
-  list-style-type: none;
+  user-select: none;
 }
 
 main ul li {
-  font-size: 24px;
+  /* FLEX-SETTINGS */
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* ^FLEX-SETTINGS^ */
-  color: var(--unitedNationsBlue);
-  max-width: 15rem;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  align-items: center;
+
+  font-size: 24px;
+  max-width: 18rem;
   padding: 0.3rem;
   margin: 20px auto;
   border-radius: 10px;
   cursor: pointer;
+
+  /* COLORS */
+  color: var(--unitedNationsBlue);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
   background: rgb(27, 27, 27);
 }
 
 main ul li:hover {
+  /* COLORS */
   background: rgb(20, 20, 20);
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.267);
 }
@@ -94,61 +98,73 @@ main section p {
   font-family: "Josefin Slab", serif;
   line-height: 1.5rem;
   font-size: 18px;
-  color: white;
   padding: 2rem 0;
   text-align: center;
+
+  /* COLORS */
+  color: white;
 }
 
 main section {
   display: none;
   margin: auto;
   max-width: 20rem;
+
+  /* COLORS */
   border-top: 1px solid var(--unitedNationsBlue);
   border-bottom: 1px solid var(--unitedNationsBlue);
 }
 
 footer {
+  /* FLEX-SETTINGS */
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: fixed;
   bottom: 0;
   left: 0;
-  align-items: center;
-  justify-content: center;
-  /* ^FLEX-SETTINGS^ */
   width: 100%;
   height: 4rem;
+
+  /* COLORS */
   background: linear-gradient(to bottom, rgb(30, 30, 30), rgb(40, 40, 40));
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.188);
 }
 
 #my-signature {
-  font-family: "Qwigley", cursive;
-  color: rgb(72, 72, 72);
-  font-size: 3rem;
-  position: fixed;
-  bottom: 3.5rem;
-  margin-bottom: -1.2rem;
   z-index: 1;
+  font-family: "Qwigley", cursive;
+  font-size: 35px;
+  position: fixed;
+  bottom: 4.2rem;
+  margin-bottom: -1.2rem;
   user-select: none;
+
+  /* COLORS */
+  color: rgb(72, 72, 72);
 }
 
 footer ul {
+  /* FLEX-SETTINGS */
   display: flex;
   text-align: center;
   gap: 10vw;
-  /* ^FLEX-SETTINGS^ */
+
   font-size: 18px;
   list-style: none;
 }
 
 footer a {
-  color: var(--unitedNationsBlue);
   text-decoration: none;
   font-family: "Josefin Slab", serif;
   display: block;
   position: relative;
   padding: 0.4em 0;
   overflow: hidden;
+
+  /* COLORS */
+  color: var(--unitedNationsBlue);
 }
 
 /* 
@@ -162,9 +178,11 @@ footer a::after {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: white;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
+
+  /* COLORS */
+  background-color: white;
 }
 
 footer a:hover::after,
@@ -200,7 +218,7 @@ main::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
-/* MOBILE VERSION*/
+/* MOBILE VERSION */
 @media screen and (max-width: 500px) {
   header h1 {
     font-size: 25px;
