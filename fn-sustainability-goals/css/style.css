@@ -199,3 +199,22 @@ main::-webkit-scrollbar-thumb {
   outline: 1px solid var(--unitedNationsBlue);
   border-radius: 50px;
 }
+
+/* MOBILE VERSION*/
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header img {
+    height: 2rem;
+    width: 2rem;
+  }
+  #my-signature {
+    font-size: 2rem;
+    bottom: 4rem;
+  }
+
+  footer ul {
+    font-size: 16px;
+  }
+}
