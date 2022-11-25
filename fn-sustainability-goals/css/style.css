@@ -90,6 +90,23 @@ main ul li:hover {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.267);
 }
 
+main section p {
+  font-family: "Josefin Slab", serif;
+  line-height: 1.5rem;
+  font-size: 18px;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+main section {
+  display: none;
+  margin: auto;
+  max-width: 20rem;
+  border-top: 1px solid var(--unitedNationsBlue);
+  border-bottom: 1px solid var(--unitedNationsBlue);
+}
+
 footer {
   display: flex;
   position: fixed;

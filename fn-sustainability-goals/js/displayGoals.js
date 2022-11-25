@@ -1,7 +1,5 @@
 import { data } from "./api.js"; // Data = API-List
 
-// /v1/dgs / Goal / { goalCode } / Target / List;
-
 const ul = document.querySelector("main ul");
 let userChoice = null;
 
@@ -17,7 +15,10 @@ async function displayAllGoals() {
 
   for (let i = 0; i < amountOfGoalsArray.length; i++) {
     const liEl = `
-		<li>${amountOfGoalsArray[i]}</li>
+		<li>
+    ${amountOfGoalsArray[i]}
+    </li>
+    
     `;
     ul.insertAdjacentHTML("beforeend", liEl);
   }
@@ -47,8 +48,38 @@ async function displayAllGoals() {
           }
         }
       });
+      const liEls = document.querySelectorAll("main ul li");
+      liEls.forEach((x) => {
+        x.addEventListener("click", async (x) => {
+          const goalCode = x.target.innerHTML;
+          ul.textContent = "";
+          await getGoalTitle(goalCode);
+        });
+      });
     });
   });
+}
+
+async function getGoalTitle(goalCode) {
+  try {
+    const URL = "https://unstats.un.org/SDGAPI";
+    const resp = await fetch(
+      `${URL}/v1/sdg/Target/${goalCode}/Indicator/List?includechildren=true`
+    );
+    const titleData = await resp.json();
+    displayTitle(titleData);
+    // console.log(titleData[0].title);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function displayTitle(titleData) {
+  console.log(titleData[0].title);
+  const p = document.querySelector("main p");
+  const section = document.querySelector("main section");
+  section.style.display = "block";
+  p.textContent = titleData[0].title;
 }
 
 export { displayAllGoals };
