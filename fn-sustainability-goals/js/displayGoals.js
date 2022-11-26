@@ -78,6 +78,11 @@ function displayTitle(titleData) {
   console.log(titleData[0].title);
   const p = document.querySelector("main p");
   const section = document.querySelector("main section");
+  const main = document.querySelector("main");
+  const backButton = document.querySelector("#home-btn");
+  backButton.style.display = "block";
+  main.style.marginTop = "0";
+  main.style.marginBottom = "1rem";
   section.style.display = "block";
   p.textContent = titleData[0].title;
 }
