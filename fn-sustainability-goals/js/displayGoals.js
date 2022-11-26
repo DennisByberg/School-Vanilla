@@ -75,7 +75,6 @@ async function getGoalTitle(goalCode) {
 }
 
 function displayTitle(titleData) {
-  console.log(titleData[0].title);
   const p = document.querySelector("main p");
   const section = document.querySelector("main section");
   const main = document.querySelector("main");
