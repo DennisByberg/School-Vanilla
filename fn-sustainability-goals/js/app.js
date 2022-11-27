@@ -1,8 +1,12 @@
-import { displayAllGoals } from "./displayGoals.js";
-import { triggerBackButton } from "./backButton.js";
+import { displayAllGoals } from "./displayList.js";
+import {
+  triggerBackButton,
+  resetPageWhenNameIsClicked,
+} from "./clickHandler.js";
 
-// Start of program... Displays all the goals in a ul-list.
+// Start of program... Displays all the goals in an ul-list.
 displayAllGoals();
 
-// Functionality of the back button.
+// Functionality of the clicks
 triggerBackButton();
+resetPageWhenNameIsClicked();
