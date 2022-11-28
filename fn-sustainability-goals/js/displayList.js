@@ -1,23 +1,25 @@
-import { data } from "./api.js"; // Data = API-List
-let userChoice = null;
+import { data, basicData } from "./api.js"; // Data = API-List
 
 async function displayAllGoals() {
+  let userChoice = null;
   const ul = document.querySelector("main ul");
-  const allGoals = await data;
-  let amountOfGoalsArray = [];
 
+  let amountOfGoalsArray = [];
+  const allGoals = await data;
   for (let i = 0; i < allGoals.length; i++) {
     if (!amountOfGoalsArray.includes(allGoals[i].goal)) {
       amountOfGoalsArray.push(allGoals[i].goal);
     }
   }
 
+  const allBasicGoals = await basicData;
   for (let i = 0; i < amountOfGoalsArray.length; i++) {
     const liTemplate = `
 		<li>
     ${amountOfGoalsArray[i]}
     </li>
-    
+    <p>${allBasicGoals[i].title}</p>
+
     `;
     ul.insertAdjacentHTML("beforeend", liTemplate);
   }
