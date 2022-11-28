@@ -5,6 +5,7 @@
 
 :root {
   --unitedNationsBlue: #82afff;
+  --textColorLightBlue: #ddeaff;
 }
 
 * {
@@ -84,7 +85,7 @@ main ul li {
   font-size: 24px;
   max-width: 18rem;
   padding: 0.3rem;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   border-radius: 10px;
   cursor: pointer;
 
@@ -100,6 +101,15 @@ main ul li:hover {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.267);
 }
 
+main ul p {
+  color: var(--textColorLightBlue);
+  text-align: center;
+  width: 20rem;
+  margin: auto auto 2rem auto;
+  font-family: "Josefin Slab", serif;
+  font-size: 18px;
+}
+
 main section p {
   font-family: "Josefin Slab", serif;
   line-height: 1.5rem;
@@ -108,7 +118,7 @@ main section p {
   text-align: center;
 
   /* COLORS */
-  color: white;
+  color: var(--textColorLightBlue);
 }
 
 main section {

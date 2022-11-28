@@ -7,6 +7,6 @@ import {
 // Start of program... Displays all the goals in an ul-list.
 displayAllGoals();
 
-// Functionality of the clicks
+// Functionality of the clicks on the website...
 triggerBackButton();
 resetPageWhenNameIsClicked();

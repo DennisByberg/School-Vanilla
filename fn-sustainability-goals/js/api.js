@@ -10,6 +10,14 @@ async function getGoals() {
   }
 }
 
-const data = getGoals();
+async function getBasicGoals() {
+  const resp = await fetch(`${URL}/v1/sdg/Goal/List`);
+  const data = await resp.json();
+  return data;
+}
 
-export { data };
+// call the function...
+const data = getGoals();
+const basicData = getBasicGoals();
+
+export { data, basicData };

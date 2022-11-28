@@ -1,5 +1,6 @@
 import { displayAllGoals } from "./displayList.js";
 
+// Backbutton when you are on the last page ~> TITLE
 function triggerBackButton() {
   document.querySelector("#home-btn").addEventListener("click", () => {
     resetList();
@@ -7,13 +8,14 @@ function triggerBackButton() {
   });
 }
 
+// Triggered when you click "FN Sus Goals in header"...
 function resetPageWhenNameIsClicked() {
   document.querySelector("header h1").addEventListener("click", () => {
     window.location.reload();
   });
 }
 
-// Function that resets the list to its start version...
+// Reset
 function resetList() {
   document.querySelector("#home-btn").style.display = "none";
   document.querySelector("main ul").textContent = "";
