@@ -11,12 +11,16 @@ async function getGoals() {
 }
 
 async function getBasicGoals() {
-  const resp = await fetch(`${URL}/v1/sdg/Goal/List`);
-  const data = await resp.json();
-  return data;
+  try {
+    const resp = await fetch(`${URL}/v1/sdg/Goal/List`);
+    const data = await resp.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-// call the function...
+// call the functions...
 const data = getGoals();
 const basicData = getBasicGoals();
 
