@@ -145,11 +145,13 @@ h1 {
   color: rgba(256, 256, 256, 1);
   position: relative;
   margin: 1rem;
+  transition: all 0.2s ease;
 }
 
 #buttons-section button:hover,
 #play-or-hs-buttons button:hover,
 #submit:hover {
+  transform: scale(1.03);
   background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
     radial-gradient(circle at right top, rgb(1, 110, 218), rgb(1, 110, 218));
 }
