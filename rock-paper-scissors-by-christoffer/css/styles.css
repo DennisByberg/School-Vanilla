@@ -204,14 +204,19 @@ h1 {
 }
 
 .slider ul li {
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
   display: flex;
   color: rgb(255, 110, 134);
-  box-shadow: 0 0 10px rgb(137, 53, 255);
+  box-shadow: 0 0 5px rgb(137, 53, 255);
   border-radius: 10px;
-  width: 100%;
   padding: 0.5rem 0.5rem;
-  max-width: 17rem;
+  width: 100%;
   margin: auto;
+  max-width: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 /* 
@@ -223,16 +228,17 @@ ul::-webkit-scrollbar {
 }
 
 ul::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(45, 39, 155, 0.714);
+  box-shadow: inset 0 0 6px rgb(45, 39, 155);
   border-radius: 50px;
 }
 
 ul::-webkit-scrollbar-thumb {
-  background-color: rgba(225, 59, 214, 0.478);
+  background-color: rgba(225, 59, 214, 0.152);
   outline: 1px solid rgba(137, 53, 255, 0.571);
   border-radius: 50px;
 }
 
+/* MEDIA Q */
 @media screen and (max-width: 1000px) {
   img {
     display: none;
