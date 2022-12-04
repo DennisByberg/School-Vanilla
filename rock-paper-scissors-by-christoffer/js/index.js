@@ -1,4 +1,5 @@
-import { saveToDatabase } from "./firebase.js";
+import { saveToDatabase, getAllHighScores } from "./firebase.js";
+import { toggleSlider } from "./slider.js";
 
 let userWeapon; //Här sparar vi valet som användaren gör
 let computerWeapon; //Här sparar vi datorns val
@@ -18,6 +19,8 @@ printRound();
 const menuBtn = document.querySelector(".hamburger");
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("is-active");
+  getAllHighScores();
+  toggleSlider();
 });
 
 //Det gör här är att vi hämtar knappen och kör kod när användaren klickar på knappen ROCK.
@@ -150,7 +153,6 @@ function getWinner() {
   }
 
   console.log(`Ditt vapen: ${userWeapon} Datorns vapen: ${computerWeapon}`);
-
   //Avgör vinnare. Kollar först om det blir blivit oavgjort annars vem som vann.
   if (userWeapon == computerWeapon) {
     stats.draws++;
