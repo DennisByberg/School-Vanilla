@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sten, Sax och påse</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/index.js" type="module"></script>
+  </head>
+  <body>
+    <button class="hamburger">
+      <div class="bar"></div>
+    </button>
+    <img src="./images/arrow.png" alt="" />
+    <p id="highscore-txt">Highscore</p>
+    <h2 id="omgång-txt"></h2>
+    <section id="buttons-section">
+      <button id="rock">Sten</button>
+      <button id="scissor">Sax</button>
+      <button id="paper">Påse</button>
+    </section>
+    <h1 id="winner">Välj ditt vapen!</h1>
+
+    <!-- Only visible when about to submit hs to db -->
+    <section id="submit-to-hs-form">
+      <input
+        type="text"
+        placeholder="Type ur username here..."
+        maxlength="20"
+      />
+      <button id="submit">SUBMIT</button>
+    </section>
+  </body>
+</html>

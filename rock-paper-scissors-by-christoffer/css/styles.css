@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+/* font-family: 'Fira Code', monospace; */
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+/* font-family: 'Marck Script', cursive; */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #000;*/
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33));
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  cursor: pointer;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  margin: 1.5rem;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: rgb(255, 162, 235);
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+img {
+  width: 130px;
+  position: fixed;
+  top: 60px;
+  left: 80px;
+  transform: rotate(260deg);
+  filter: contrast(0%);
+}
+
+#highscore-txt {
+  color: rgb(252, 204, 101);
+  position: fixed;
+  top: 130px;
+  left: 195px;
+  font-family: "Marck Script", cursive;
+  font-size: 20px;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(155, 31, 144);
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+#omgång-txt {
+  color: transparent;
+  background-image: linear-gradient(
+    28deg,
+    rgb(220, 113, 155),
+    rgb(162, 69, 224)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#submit-to-hs-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+}
+
+#submit-to-hs-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 63, 213, 0.432);
+  outline: none;
+  margin: 2rem;
+  color: white;
+  padding: 10px 2px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Fira Code", monospace;
+}
+#submit-to-hs-form input::placeholder {
+  color: rgba(255, 255, 255, 0.144);
+  text-align: center;
+}
+
+#submit-to-hs-form button {
+  margin: 0 auto;
+}
+
+h1 {
+  color: transparent;
+  background-image: linear-gradient(28deg, rgb(220, 113, 155), rgb(41, 10, 62));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#buttons-section button,
+#play-or-hs-buttons button,
+#submit {
+  outline: none;
+  padding: 0.8rem 2rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at right top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: rgba(256, 256, 256, 1);
+  position: relative;
+  margin: 1rem;
+}
+
+#buttons-section button:hover,
+#play-or-hs-buttons button:hover,
+#submit:hover {
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at right top, rgb(1, 110, 218), rgb(1, 110, 218));
+}
+
+.active {
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at right top, rgb(1, 110, 218), rgb(1, 110, 218));
+}
+
+#success-txt {
+  margin: 2rem;
+  color: rgb(152, 255, 68);
+  font-size: 28px;
+  font-family: "Marck Script", cursive;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1000px) {
+  img {
+    display: none;
+  }
+
+  #highscore-txt {
+    display: none;
+  }
+}
