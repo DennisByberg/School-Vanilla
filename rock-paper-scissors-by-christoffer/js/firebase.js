@@ -68,7 +68,7 @@ export async function getAllHighScores() {
     } else {
       const template = `<li>${highScore.data().username.toUpperCase()} | ${
         highScore.data().wins
-      } W | ${highScore.data().draws} D | ${highScore.data().losses} L </li>`;
+      } W | ${highScore.data().draws} D | ${highScore.data().losses} L |</li>`;
       zeroWins.push(template);
     }
   });
