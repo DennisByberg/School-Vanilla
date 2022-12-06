@@ -1,0 +1,137 @@
+#planets {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#sun {
+  cursor: pointer;
+  background-color: #ffd029;
+  height: 100%;
+  width: 20rem;
+  border-radius: 100%;
+  margin-left: -19rem;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.64);
+  z-index: 2;
+}
+
+#mercury {
+  cursor: pointer;
+  background-color: #8c8b85;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#venus {
+  cursor: pointer;
+  background-color: #e6cdcb;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#earth {
+  cursor: pointer;
+  background-color: #418ed4;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#mars {
+  cursor: pointer;
+  background-color: #ef5f5f;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#jupiter {
+  cursor: pointer;
+  background-color: #e29468;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#saturn {
+  cursor: pointer;
+  background-color: #c7aa72;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#sat-circle {
+  background-color: #ddccaad7;
+  height: 12rem;
+  width: 0.4rem;
+  border-radius: 100%;
+  transform: rotate(60deg);
+  margin: -2rem 3.6rem;
+}
+
+#uranus {
+  cursor: pointer;
+  background-color: #c9d4f1;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#neptune {
+  cursor: pointer;
+  background-color: #7a91a7;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.64);
+}
+
+#mercury:hover,
+#neptune:hover,
+#venus:hover,
+#earth:hover,
+#mars:hover,
+#jupiter:hover,
+#saturn:hover,
+#uranus:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.64);
+}
+
+@media screen and (max-width: 700px) {
+  #jupiter {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  #saturn {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  #sat-circle {
+    height: 7rem;
+    width: 0.2rem;
+    margin: -1rem 2.4rem;
+  }
+
+  #uranus {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  #neptune {
+    height: 3rem;
+    width: 3rem;
+  }
+}
