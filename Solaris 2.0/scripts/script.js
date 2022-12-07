@@ -1,9 +1,36 @@
-import { toggleSlider } from "./slider.js";
-import { hamburgerMenu } from "./hamburger.js";
+import { toggleSlider, toggleFavoriteSlider } from "./slider.js";
+import {
+  hamburgerMenu,
+  navBar,
+  projectName,
+  hamburgerBtn,
+} from "./hamburger.js";
 hamburgerMenu(); // function...
 
 const planets = document.querySelectorAll("main article");
 let planetIndex = "";
+
+const favoritePlanetsButton = document.querySelector("#fav-planets-btn");
+favoritePlanetsButton.addEventListener("click", () => {
+  toggleFavoriteSlider();
+});
+
+// back button in favorite slider...
+document
+  .querySelector("#favoriteSlider button")
+  .addEventListener("click", () => {
+    toggleFavoriteSlider();
+    navBar.classList.toggle("is-active");
+    projectName.classList.toggle("is-active");
+    hamburgerBtn.classList.toggle("is-active");
+  });
+
+// My Github Button...
+document.querySelector("#myGithub").addEventListener("click", () => {
+  navBar.classList.toggle("is-active");
+  projectName.classList.toggle("is-active");
+  hamburgerBtn.classList.toggle("is-active");
+});
 
 // |MOUSE-LEAVE EVENT|~> Triggered when your mouse:hover leaves the planet and resets the text to an empty string...
 planets.forEach((planet) => {
