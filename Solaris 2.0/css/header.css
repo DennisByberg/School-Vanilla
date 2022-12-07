@@ -8,6 +8,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 2;
 }
 
 header nav ul {
@@ -24,7 +25,6 @@ header nav ul {
   height: 0;
   transform: translateX(200%);
 }
-
 header nav ul li {
   font-family: "Fredericka the Great", cursive;
   color: white;
