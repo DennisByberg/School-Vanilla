@@ -1,0 +1,37 @@
+#hamburger {
+  width: 50px;
+  cursor: pointer;
+  z-index: 999;
+  background: transparent;
+  border: none;
+  margin: 2rem 3rem auto auto;
+  transition: all 0.3s ease-in-out;
+  margin: 1rem 1rem 1rem auto;
+}
+
+#hamburger:hover {
+  transform: scale(1.1);
+}
+
+#hamburger #hamburger-bar,
+#hamburger:after,
+#hamburger:before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: rgb(255, 102, 102);
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+#hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+#hamburger.is-active:after {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+#hamburger.is-active #hamburger-bar {
+  opacity: 0;
+}

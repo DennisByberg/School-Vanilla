@@ -4,27 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/planets.css" />
-    <script defer src="/scripts/script.js"></script>
+    <link rel="stylesheet" href="./css/background.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/hamburger.css" />
+
+    <!-- SCRIPT -->
+    <script defer src="/scripts/script.js" type="module"></script>
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- TITLE -->
     <title>Solaris</title>
   </head>
+
   <body>
     <video autoplay muted loop id="bg-video">
       <source src="/videos/bg-1.mp4" type="video/mp4" />
     </video>
     <header>
-      <img src="/images/favicon.ico" alt="" />
-      <a
-        target="_blank"
-        href="https://github.com/FRK22G-grundlaggande-js/slutexamination"
-        >SOLARIS</a
-      >
-      <a target="_blank" href="https://github.com/DennisByberg?tab=repositories"
-        >DENNIS B</a
-      >
+      <button id="hamburger">
+        <div id="hamburger-bar"></div>
+      </button>
+      <nav>
+        <ul>
+          <li>FAVORITE PLANETS</li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/FRK22G-grundlaggande-js/slutexamination"
+              >PROJECT</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/DennisByberg?tab=repositories"
+              >MY GITHUB</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
+    <h1 id="project-name">Solaris <span>2.0</span></h1>
     <main id="planets">
       <article id="sun"></article>
       <article id="mercury"></article>

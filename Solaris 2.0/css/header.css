@@ -1,0 +1,56 @@
+/* font-family: 'Shalimar', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+
+/* font-family: 'Fredericka the Great', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  list-style: none;
+  text-align: center;
+  background: rgba(41, 41, 41, 0.281);
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.384);
+  transition: 0.3s ease-out;
+  height: 0;
+  transform: translateX(200%);
+}
+
+header nav ul li {
+  font-family: "Fredericka the Great", cursive;
+  color: white;
+  width: 100%;
+  padding: 2rem 1rem;
+  display: block;
+  font-size: 30px;
+}
+
+header nav ul li:hover {
+  background: rgba(29, 29, 29, 0.281);
+  cursor: pointer;
+}
+
+header nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul.is-active {
+  transform: translateX(0%);
+  height: auto;
+}
+
+@media screen and (max-width: 700px) {
+  header nav ul li {
+    font-size: 20px;
+  }
+}

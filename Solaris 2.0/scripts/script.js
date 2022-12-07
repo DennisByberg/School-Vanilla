@@ -1,5 +1,17 @@
+import { toggleSlider } from "./slider.js";
+import { hamburgerMenu } from "./hamburger.js";
+
+hamburgerMenu();
+
 const planets = document.querySelectorAll("main article");
 let planetIndex = "";
+
+// |MOUSE-LEAVE EVENT|~> Triggered when your mouse:hover leaves the planet and resets the text to an empty string...
+planets.forEach((planet) => {
+  planet.addEventListener("mouseleave", (event) => {
+    DeleteTextOnLeave(event);
+  });
+});
 
 // |MOUSE-OVER EVENT|~> Triggered when you hover over a planet and change the planet name text...
 planets.forEach((planet) => {
@@ -8,12 +20,12 @@ planets.forEach((planet) => {
   });
 });
 
-// |MOUSE-LEAVE EVENT|~> Triggered when your mouse:hover leaves the planet and resets the text to an empty string...
-planets.forEach((planet) => {
-  planet.addEventListener("mouseleave", (event) => {
-    DeleteTextOnLeave(event);
-  });
-});
+function ChangeTextOnHover(planets) {
+  const planetName = planets.target.id;
+  if (planetName != "sat-circle") {
+    document.querySelector("#hover-text").textContent = planetName;
+  }
+}
 
 // |CLICK EVENT|~> Triggered when you click a planet...
 planets.forEach((planet) => {
@@ -34,23 +46,11 @@ const backButton = document
     moons.innerHTML = "";
   });
 
-function ChangeTextOnHover(planets) {
-  const planetName = planets.target.id;
-  if (planetName != "sat-circle") {
-    document.querySelector("#hover-text").textContent = planetName;
-  }
-}
-
 function DeleteTextOnLeave(planets) {
   const planetName = planets.target.id;
   if (planetName != "sat-circle") {
     document.querySelector("#hover-text").textContent = "";
   }
-}
-
-// function thats toggle the slider back and forth...
-function toggleSlider() {
-  slider.classList.toggle("show");
 }
 
 // function that gives us a planet index 0-8...
@@ -98,7 +98,7 @@ function getPlanetIndex() {
 async function getPlanets() {
   // const key = await getKey();
   const response = await fetch(`./scripts/data.json`);
-  data = await response.json();
+  const data = await response.json();
   getPlanetIndex();
 
   let maxLengthOfParagraph = 1000;
