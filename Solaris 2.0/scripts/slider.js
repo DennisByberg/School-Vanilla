@@ -3,4 +3,8 @@ function toggleSlider() {
   slider.classList.toggle("show");
 }
 
-export { toggleSlider };
+function toggleFavoriteSlider() {
+  favoriteSlider.classList.toggle("show");
+}
+
+export { toggleSlider, toggleFavoriteSlider };
