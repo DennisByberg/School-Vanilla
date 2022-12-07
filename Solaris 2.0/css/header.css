@@ -28,9 +28,11 @@ header nav ul {
 header nav ul li {
   font-family: "Fredericka the Great", cursive;
   color: white;
-  padding: 2rem 1rem;
+  width: 100%;
+  padding: 1.5rem 2rem;
   display: block;
   font-size: 20px;
+  margin: auto;
 }
 
 header nav ul li:hover {
