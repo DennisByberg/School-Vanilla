@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  user-select: none;
 }
 
 #project-name {
@@ -64,6 +65,24 @@ body {
   padding: 7rem;
 }
 
+#fav-star {
+  filter: invert(100%);
+  width: 30px;
+  margin-left: 0.5rem;
+}
+
+#fav-star:hover {
+  cursor: pointer;
+  filter: invert(80%);
+}
+
+#name-and-star-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 #slider.show {
   transform: translateY(0);
   background-color: rgba(0, 0, 0, 0.96);
@@ -90,8 +109,9 @@ content h3 {
 }
 
 #slider p:nth-child(3) {
-  padding: 1.5rem 0;
+  padding: 2rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+  max-height: 15rem;
 }
 
 #info-container {
@@ -178,6 +198,6 @@ p::-webkit-scrollbar-thumb {
 
   #slider p:nth-child(3) {
     margin: 0 0rem;
-    padding: 0;
+    padding: 0.5rem;
   }
 }
