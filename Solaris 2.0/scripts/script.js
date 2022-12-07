@@ -43,6 +43,7 @@ const backButton = document
     sun.style.backgroundColor = "#ffd029";
     let moons = document.querySelector("#moons");
     moons.innerHTML = "";
+    document.querySelector("#slider p").style.overflowY = "hidden";
   });
 
 function DeleteTextOnLeave(planets) {
@@ -113,6 +114,7 @@ async function getPlanets() {
   document.querySelector("#slider p").innerText = data.bodies[planetIndex].desc;
   if (data.bodies[planetIndex].desc.length > maxLengthOfParagraph) {
     document.querySelector("#slider p").style.fontSize = "14px";
+    document.querySelector("#slider p").style.overflowY = "scroll";
     document.querySelector("#slider").style.marginTop = "1rem";
   }
 
