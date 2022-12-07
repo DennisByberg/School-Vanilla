@@ -1,12 +1,12 @@
 #hamburger {
   width: 50px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1;
   background: transparent;
   border: none;
   margin: 2rem 3rem auto auto;
   transition: all 0.3s ease-in-out;
-  margin: 1rem 1rem 1rem auto;
+  margin: 2rem 3rem 1rem auto;
 }
 
 #hamburger:hover {
