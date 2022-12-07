@@ -1,7 +1,6 @@
 import { toggleSlider } from "./slider.js";
 import { hamburgerMenu } from "./hamburger.js";
-
-hamburgerMenu();
+hamburgerMenu(); // function...
 
 const planets = document.querySelectorAll("main article");
 let planetIndex = "";
