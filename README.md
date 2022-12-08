@@ -1,1 +1,3 @@
-# School-Vanilla
+# AVAILABLE PROJECTS
+
+HolyCats: 
