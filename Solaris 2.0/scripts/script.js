@@ -5,14 +5,26 @@ import {
   projectName,
   hamburgerBtn,
 } from "./hamburger.js";
+import { saveToDatabase, getAllPlanets } from "./firebase-config.js";
 hamburgerMenu(); // function...
 
 const planets = document.querySelectorAll("main article");
+const favStarImage = document.querySelector("#fav-star");
 let planetIndex = "";
 
+// Save to db...
+favStarImage.addEventListener("click", () => {
+  const planetName = document.querySelector(
+    "#name-and-star-container h2"
+  ).textContent;
+  saveToDatabase(planetName);
+});
+
+// Click event that triggers when we click the navBar item "favorite planets"...
 const favoritePlanetsButton = document.querySelector("#fav-planets-btn");
 favoritePlanetsButton.addEventListener("click", () => {
   toggleFavoriteSlider();
+  getAllPlanets();
 });
 
 // back button in favorite slider...
@@ -142,7 +154,6 @@ async function getPlanets() {
   if (data.bodies[planetIndex].desc.length > maxLengthOfParagraph) {
     document.querySelector("#slider p").style.fontSize = "14px";
     document.querySelector("#slider p").style.overflowY = "scroll";
-    document.querySelector("#slider").style.marginTop = "1rem";
   }
 
   // circumference
