@@ -34,7 +34,11 @@ favStarImage.addEventListener("click", async () => {
 
   if (result.empty) {
     saveToDatabase(planetName);
+    const x = document.querySelector("#fav-star");
+    x.src = "./images/favourite-filled.png";
+    x.style.filter = "invert(0%)";
   } else {
+    // do nothing?
   }
 });
 
@@ -85,9 +89,31 @@ function ChangeTextOnHover(planets) {
 
 // |CLICK EVENT|~> Triggered when you click a planet...
 planets.forEach((planet) => {
-  planet.addEventListener("click", () => {
+  planet.addEventListener("click", async () => {
     planetIndex = planet.id;
     getPlanets(planetIndex);
+
+    const planetName = document.querySelector(
+      "#name-and-star-container h2"
+    ).textContent;
+
+    const planetQuery = query(
+      collection(db, "Favorites"),
+      where("planet", "==", planetName)
+    );
+    const result = await getDocs(planetQuery);
+    console.log(result);
+
+    const x = document.querySelector("#fav-star");
+    x.src = "";
+    console.log(result.empty);
+    if (result.empty) {
+      x.src = "./images/favourite-not-filled.png";
+      x.style.filter = "invert(100%)";
+    } else {
+      x.src = "./images/favourite-filled.png";
+      x.style.filter = "invert(0%)";
+    }
     toggleSlider();
   });
 });
