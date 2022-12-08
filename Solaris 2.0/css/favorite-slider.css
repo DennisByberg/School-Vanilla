@@ -2,6 +2,7 @@
 #favoriteSlider {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   color: white;
   position: absolute;
@@ -18,6 +19,9 @@
 }
 
 #favoriteSlider button {
+  position: fixed;
+  top: 0;
+  right: 0;
   background-color: black;
   color: white;
   cursor: pointer;
@@ -25,6 +29,33 @@
   padding: 1rem 2rem;
   width: 10rem;
   border-radius: 3px;
+  margin: 1rem;
+}
+
+#favoriteSlider ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  width: 50%;
+  list-style: none;
+}
+
+#favoriteSlider ul li {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+#favoriteSlider img {
+  width: 15px;
+  margin-left: 0.3rem;
+}
+
+#favoriteSlider img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #favoriteSlider button:hover {
