@@ -5,7 +5,15 @@ import {
   projectName,
   hamburgerBtn,
 } from "./hamburger.js";
-import { saveToDatabase, getAllPlanets } from "./firebase-config.js";
+import {
+  getAllPlanets,
+  saveToDatabase,
+  query,
+  db,
+  collection,
+  where,
+  getDocs,
+} from "./firebase-config.js";
 hamburgerMenu(); // function...
 
 const planets = document.querySelectorAll("main article");
@@ -13,11 +21,21 @@ const favStarImage = document.querySelector("#fav-star");
 let planetIndex = "";
 
 // Save to db...
-favStarImage.addEventListener("click", () => {
+favStarImage.addEventListener("click", async () => {
   const planetName = document.querySelector(
     "#name-and-star-container h2"
   ).textContent;
-  saveToDatabase(planetName);
+
+  const planetQuery = query(
+    collection(db, "Favorites"),
+    where("planet", "==", planetName)
+  );
+  const result = await getDocs(planetQuery);
+
+  if (result.empty) {
+    saveToDatabase(planetName);
+  } else {
+  }
 });
 
 // Click event that triggers when we click the navBar item "favorite planets"...
@@ -75,7 +93,7 @@ planets.forEach((planet) => {
 });
 
 // |CLICK-EVENT|~> Triggered when you are in the slider-section and you click the BACK button...
-const backButton = document
+document
   .querySelector("#bottom-info-container button")
   .addEventListener("click", () => {
     toggleSlider();

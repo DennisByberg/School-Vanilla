@@ -6,6 +6,8 @@ import {
   getDocs,
   deleteDoc,
   doc,
+  query,
+  where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -45,7 +47,6 @@ function addClickEvent() {
   allPlanets.forEach((p) => {
     p.addEventListener("click", (event) => {
       const planetId = event.target.getAttribute("data-planet-id");
-
       removeFromDatabase(planetId);
       getAllPlanets();
     });
@@ -54,17 +55,25 @@ function addClickEvent() {
 
 async function getAllPlanets() {
   const allPlanetsUL = document.querySelector("#favoriteSlider ul");
-  const planets = await getDocs(collection(db, "Favorites"));
-
+  const planetsInDB = await getDocs(collection(db, "Favorites"));
   allPlanetsUL.textContent = "";
-  planets.forEach((p) => {
-    console.log(p.id);
-    console.log(p.data());
+
+  planetsInDB.forEach((p) => {
     const liTemplate = `<li data-planet-id="${p.id}">${p.data().planet}</li>`;
     allPlanetsUL.insertAdjacentHTML("beforeend", liTemplate);
   });
-
-  addClickEvent();
+  const allPlanetsLi = document.querySelectorAll("#favoriteSlider ul li");
+  if (allPlanetsLi.length === 0) {
+    document.querySelector("#favoriteSlider h3").textContent = "";
+    allPlanetsUL.innerHTML = `
+    <p>You don't have any favorite planets...</p>
+    <p>Go back and click on a planet and then favorite it by clicking on the star</p>
+    `;
+  } else {
+    document.querySelector("#favoriteSlider h3").textContent =
+      "Favorite Planets";
+    addClickEvent();
+  }
 }
 
-export { saveToDatabase, getAllPlanets };
+export { saveToDatabase, getAllPlanets, query, db, collection, where, getDocs };

@@ -111,6 +111,7 @@ content h3 {
   padding: 2rem 0;
   border-bottom: 1px solid rgba(128, 128, 128, 0.349);
   max-height: 15rem;
+  overflow-y: scroll;
 }
 
 #info-container {
@@ -181,6 +182,7 @@ p::-webkit-scrollbar-thumb {
   }
 
   #name-and-star-container {
+    margin: 0 auto;
     justify-content: center;
   }
 
