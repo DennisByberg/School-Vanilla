@@ -30,7 +30,6 @@ body {
 #project-name span {
   color: rgba(255, 0, 0, 0.575);
   font-size: 100px;
-  /* border-bottom: 1px solid wheat; */
   text-shadow: none;
   border-bottom: 3px solid rgba(255, 255, 255, 0.281);
 }
@@ -79,8 +78,8 @@ body {
 #name-and-star-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: start;
 }
 
 #slider.show {
@@ -109,13 +108,12 @@ content h3 {
 }
 
 #slider p:nth-child(3) {
-  padding: 2rem;
+  padding: 2rem 0;
   border-bottom: 1px solid rgba(128, 128, 128, 0.349);
   max-height: 15rem;
 }
 
 #info-container {
-  /* border: 1px dotted blue; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1rem 0;
@@ -136,16 +134,19 @@ content h3 {
 #bottom-info-container p {
   overflow-y: auto;
   width: 20rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 #bottom-info-container button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   background-color: black;
   color: white;
   cursor: pointer;
   box-shadow: 0 0 2px white;
+  padding: 1rem 2rem;
   width: 10rem;
-  margin-left: auto;
   border-radius: 3px;
 }
 
@@ -179,25 +180,21 @@ p::-webkit-scrollbar-thumb {
     text-align: center;
   }
 
+  #name-and-star-container {
+    justify-content: center;
+  }
+
   #info-container {
-    grid-template-columns: 1fr;
     text-align: center;
   }
+
   #bottom-info-container {
     display: flex;
     flex-direction: column;
   }
-  #bottom-info-container button {
-    margin: 3rem auto;
-    min-height: 3rem;
-  }
-
-  #moons p {
-    margin: auto;
-  }
 
   #slider p:nth-child(3) {
     margin: 0 0rem;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
