@@ -4,6 +4,8 @@ import {
   collection,
   addDoc,
   getDocs,
+  deleteDoc,
+  doc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -18,3 +20,51 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig); // app
 const db = getFirestore(app); // db
+
+async function saveToDatabase(planetName) {
+  try {
+    await addDoc(collection(db, "Favorites"), {
+      planet: planetName,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function removeFromDatabase(planetId) {
+  try {
+    await deleteDoc(doc(db, "Favorites", planetId));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function addClickEvent() {
+  const allPlanets = document.querySelectorAll("#favoriteSlider ul li");
+
+  allPlanets.forEach((p) => {
+    p.addEventListener("click", (event) => {
+      const planetId = event.target.getAttribute("data-planet-id");
+
+      removeFromDatabase(planetId);
+      getAllPlanets();
+    });
+  });
+}
+
+async function getAllPlanets() {
+  const allPlanetsUL = document.querySelector("#favoriteSlider ul");
+  const planets = await getDocs(collection(db, "Favorites"));
+
+  allPlanetsUL.textContent = "";
+  planets.forEach((p) => {
+    console.log(p.id);
+    console.log(p.data());
+    const liTemplate = `<li data-planet-id="${p.id}">${p.data().planet}</li>`;
+    allPlanetsUL.insertAdjacentHTML("beforeend", liTemplate);
+  });
+
+  addClickEvent();
+}
+
+export { saveToDatabase, getAllPlanets };
