@@ -6,9 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 
   /* The image used */
-  background-image: url("../images/pexels-eberhard-grossgasteiger-2098428.jpg");
+  background-image: url("https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-black-dark-mode-layers-5k-2880x1800-5889.jpg");
 
   /* Center and scale the image nicely */
   background-position: center;
