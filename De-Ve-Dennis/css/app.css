@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+/* font-family: 'El Messiri', sans-serif; */
+
+:root {
+  --dvdDarkBlue: #3c66b1;
+  --dvdMediumBlue: #52a2e7;
+  --dvdLightBlue: #a3cef2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
