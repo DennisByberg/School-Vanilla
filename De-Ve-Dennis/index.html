@@ -5,11 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/head-section.css" />
+    <link rel="stylesheet" href="./css/movies-section.css" />
     <!-- SCRIPT -->
     <script defer src="./scripts/app.js" type="module"></script>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <!-- TITLE -->
     <title>De-Ve-Dennis</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img
+        id="logo-img"
+        src="./images/favicon.ico"
+        alt="a black picture of the logo DVD"
+      />
+      <h1 id="site-name-txt">De-Ve-Dennis</h1>
+      <a href="#movies-section">MOVIES I WANT TO SEE</a>
+    </header>
+    <main>
+      <section id="head-section">
+        <article>
+          <div class="label-and-input-container">
+            <label id="name-txt">NAME</label>
+            <input
+              id="name-input"
+              type="text"
+              placeholder="Enter movie name here..."
+            />
+          </div>
+          <div class="label-and-input-container">
+            <label id="movie-txt">GENRE</label>
+            <input
+              id="genre-input"
+              type="text"
+              placeholder="Enter movie genre here..."
+            />
+          </div>
+          <div class="label-and-input-container">
+            <label id="date-txt">DATE</label>
+            <input id="date-input" type="date" />
+          </div>
+        </article>
+      </section>
+      <section id="movies-section">
+        <p>2</p>
+      </section>
+    </main>
+  </body>
 </html>
