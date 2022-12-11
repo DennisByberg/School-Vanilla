@@ -29,6 +29,7 @@
   max-width: 700px;
 }
 
+/* BOTH LABEL AND INPUT */
 #head-section article .label-and-input-container {
   display: flex;
   flex-direction: column;
@@ -36,21 +37,14 @@
   margin: 2rem auto;
 }
 
+/* LABEL SETTINGS */
 #head-section article .label-and-input-container label {
   color: var(--dvdLightBlue);
   margin-bottom: 0.7rem;
 }
 
-/* CALENDER COLOR */
-::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-}
-
-::-webkit-calendar-picker-indicator:hover {
-  cursor: pointer;
-}
-
-#head-section article .label-and-input-container input {
+/* INPUT SETTINGS */
+#head-section .label-and-input-container input {
   font-size: 15px;
   border: none;
   border-bottom: 1px solid var(--dvdLightBlue);
@@ -62,6 +56,7 @@
   outline: none;
 }
 
+/* "ADD TO COLLECTION" BUTTON SETTINGS */
 #head-section article button {
   font-family: "El Messiri", sans-serif;
   font-size: 17px;
@@ -70,8 +65,19 @@
   border-radius: 100px;
 }
 
+/* "ADD TO COLLECTION" BUTTON SETTINGS HOVER */
 #head-section article button:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
+}
+
+/* CALENDER COLOR */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* CALENDER ON HOVER */
+::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
 }
