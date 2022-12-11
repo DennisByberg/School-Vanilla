@@ -1,8 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
   getFirestore,
-  // collection,
-  // addDoc,
+  collection,
+  addDoc,
   // getDocs,
   // deleteDoc,
   // doc,
@@ -21,3 +21,18 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig); // app
 const db = getFirestore(app); // db
+
+async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
+  try {
+    await addDoc(collection(db, "Movies"), {
+      name: movieName,
+      genre: movieGenre,
+      releaseDate: movieReleaseDate,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// My Exports...
+export { saveToDatabase };
