@@ -1,0 +1,45 @@
+@import "./app.css";
+
+header {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 4rem;
+  user-select: none;
+}
+
+/* DVD-LOGO */
+header #logo-img {
+  width: 3rem;
+  margin: 0 0.3rem;
+}
+
+/* DE-VE-DENNIS */
+header #site-name-txt {
+  font-family: "El Messiri", sans-serif;
+  font-size: 30px;
+  margin-right: auto;
+  text-shadow: 0 0 5px var(--dvdDarkBlue);
+  color: var(--dvdLightBlue);
+}
+
+/* MOVIES I WANT TO SEE */
+header a {
+  text-decoration: none;
+  color: black;
+  background: var(--dvdMediumBlue);
+  text-shadow: 0 0 3px var(--dvdLightBlue);
+  margin-right: 1rem;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 5px black;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 100px;
+}
+
+header a:hover {
+  text-decoration: underline;
+  box-shadow: 2px 2px 7px black;
+}
