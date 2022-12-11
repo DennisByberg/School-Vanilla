@@ -1,0 +1,10 @@
+@import "./app.css";
+
+#movies-section {
+  /* background-image:(); */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
