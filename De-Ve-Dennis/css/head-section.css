@@ -18,10 +18,15 @@
 }
 
 #head-section article {
-  box-shadow: 0 0 20px var(--dvdLightBlue);
-  padding: 5rem;
+  box-shadow: 0 0 15px var(--dvdMediumBlue);
+  padding: 4rem;
   background: rgba(0, 0, 0, 0.822);
-  border-radius: 15px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80vw;
+  max-width: 700px;
 }
 
 #head-section article .label-and-input-container {
@@ -32,10 +37,32 @@
 }
 
 #head-section article .label-and-input-container label {
-  color: var(--dvdMediumBlue);
+  color: var(--dvdLightBlue);
+  margin-bottom: 0.7rem;
 }
 
 #head-section article .label-and-input-container input {
-  width: 100%;
   font-size: 15px;
+  border: none;
+  border-bottom: 1px solid var(--dvdLightBlue);
+  background: transparent;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  color: white;
+  width: 15rem;
+  outline: none;
+}
+
+#head-section article button {
+  font-family: "El Messiri", sans-serif;
+  font-size: 17px;
+  padding: 0.5rem 1rem;
+  background-color: var(--dvdMediumBlue);
+  border-radius: 100px;
+}
+
+#head-section article button:hover {
+  cursor: pointer;
+  background-color: var(--dvdDarkBlue);
+  color: white;
 }

@@ -27,6 +27,9 @@ header #site-name-txt {
 
 /* MOVIES I WANT TO SEE */
 header a {
+  font-family: "El Messiri", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
   text-decoration: none;
   color: black;
   background: var(--dvdMediumBlue);
@@ -40,6 +43,7 @@ header a {
 }
 
 header a:hover {
-  text-decoration: underline;
-  box-shadow: 2px 2px 7px black;
+  cursor: pointer;
+  background-color: var(--dvdDarkBlue);
+  color: white;
 }
