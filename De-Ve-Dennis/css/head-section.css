@@ -1,0 +1,40 @@
+@import "./app.css";
+
+#head-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* The image used */
+  background-image: url("../images/pexels-eberhard-grossgasteiger-2098428.jpg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#head-section article {
+  box-shadow: 0 0 20px var(--dvdLightBlue);
+  padding: 5rem;
+  background: rgba(0, 0, 0, 0.822);
+  border-radius: 15px;
+}
+
+#head-section article .label-and-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+#head-section article .label-and-input-container label {
+  color: var(--dvdMediumBlue);
+}
+
+#head-section article .label-and-input-container input {
+  width: 100%;
+  font-size: 15px;
+}
