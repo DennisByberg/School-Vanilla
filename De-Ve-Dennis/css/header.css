@@ -31,7 +31,8 @@ header #site-name-txt:hover {
 }
 
 /* MOVIES I WANT TO SEE ANCHOR */
-#movies-i-want-to-see-txt {
+#movies-i-want-to-see-txt,
+#go-to-top {
   font-family: "El Messiri", sans-serif;
   font-size: 13px;
   font-weight: bold;
@@ -48,7 +49,8 @@ header #site-name-txt:hover {
 }
 
 /* MOVIES I WANT TO SEE ANCHOR:HOVER */
-#movies-i-want-to-see-txt:hover {
+#movies-i-want-to-see-txt:hover,
+#go-to-top:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
