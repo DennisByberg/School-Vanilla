@@ -5,8 +5,8 @@ import {
   collection,
   addDoc,
   getDocs,
-  // deleteDoc,
-  // doc,
+  deleteDoc,
+  doc,
   // query,
   // where,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
@@ -43,5 +43,25 @@ async function getAllMovies(savedMovies) {
   return savedMovies;
 }
 
+// 3/x DB Functions |
+async function removeFromDatabase(movieID) {
+  try {
+    await deleteDoc(doc(db, "Movies", movieID));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Adds dummy data for testing purposes only... WILL GET DELETED LATER!
+import { printAllMoviesToUl } from "./movie-section/index.js";
+const image = document
+  .querySelector("#logo-img")
+  .addEventListener("click", () => {
+    const num1 = Math.floor(Math.random() * 1000);
+    const num2 = Math.floor(Math.random() * 1000);
+    saveToDatabase(`Test Name ${num1}`, `Test Genre ${num2}`, "1994-01-01");
+    printAllMoviesToUl();
+  });
+
 // Exports...
-export { saveToDatabase, getAllMovies };
+export { saveToDatabase, getAllMovies, removeFromDatabase };
