@@ -23,12 +23,17 @@ header #site-name-txt {
   margin-right: auto;
   text-shadow: 0 0 5px var(--dvdDarkBlue);
   color: var(--dvdLightBlue);
+  text-decoration: none;
+}
+
+header #site-name-txt:hover {
+  transform: scale(1.01);
 }
 
 /* MOVIES I WANT TO SEE ANCHOR */
-header a {
+#movies-i-want-to-see-txt {
   font-family: "El Messiri", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -37,13 +42,13 @@ header a {
   margin-right: 1rem;
   margin-top: 1rem;
   box-shadow: 2px 2px 5px black;
-  border: 1px solid black;
-  padding: 1rem;
+  border: 2px solid black;
+  padding: 0.5rem;
   border-radius: 100px;
 }
 
 /* MOVIES I WANT TO SEE ANCHOR:HOVER */
-header a:hover {
+#movies-i-want-to-see-txt:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
