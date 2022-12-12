@@ -17,18 +17,45 @@
 
 #movies-section ul {
   list-style: none;
+  border: 1px solid black;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.822);
+  box-shadow: 0 0 15px var(--dvdMediumBlue);
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
+  height: 50%;
 }
 
 #movies-section ul li {
-  display: flex;
   justify-content: start;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0 auto 1rem auto;
-  box-shadow: 0 0 3px black;
+  box-shadow: 0 0 3px var(--dvdMediumBlue);
+  color: var(--dvdLightBlue);
+  padding: 1rem 2rem;
 }
 
 #movies-section ul li p {
-  margin: 1rem;
-  min-width: 2rem;
+  /* margin: 1rem; */
+  /* min-width: 2rem; */
+}
+
+@media screen and (min-width: 500px) {
+  #movies-section ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #movies-section ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #movies-section ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

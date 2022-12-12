@@ -9,9 +9,13 @@ async function printAllMoviesToUl() {
   moviesUl.textContent = "";
 
   movies.forEach((movie) => {
-    const liTemplate = `<li><p>${movie.data().name}</p> <p> ${
-      movie.data().genre
-    }</p> <p>${movie.data().releaseDate}</p></li>`;
+    const liTemplate = `
+    <li>
+    <p>Name: ${movie.data().name}</p>
+    <p>Genre: ${movie.data().genre}</p>
+    <p>Release Date: ${movie.data().releaseDate}</p>
+    </li>
+    `;
 
     moviesUl.insertAdjacentHTML("beforeend", liTemplate);
   });
