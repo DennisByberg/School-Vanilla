@@ -5,6 +5,8 @@
   --dvdDarkBlue: #3c66b1;
   --dvdMediumBlue: #52a2e7;
   --dvdLightBlue: #a3cef2;
+  --dvdDangerLightRed: rgb(255, 144, 144);
+  --dvdDangerMediumRed: rgb(255, 96, 96);
 }
 
 * {
