@@ -14,3 +14,21 @@
   align-items: center;
   justify-content: center;
 }
+
+#movies-section ul {
+  list-style: none;
+}
+
+#movies-section ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 0 3px black;
+}
+
+#movies-section ul li p {
+  margin: 1rem;
+  min-width: 2rem;
+}
