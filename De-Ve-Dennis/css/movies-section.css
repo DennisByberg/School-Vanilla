@@ -18,10 +18,19 @@
 
 #movies-section ul {
   list-style: none;
-  border-radius: 30px;
+  border-radius: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 1rem;
+  border: 3px solid black;
+  overflow-y: scroll;
+  padding: 3rem 3rem 3rem 3.7rem;
+  max-height: 75vh;
+  box-shadow: 0px 0px 15px var(--dvdMediumBlue);
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.24);
+  margin: 0 auto auto auto;
 }
 
 #movies-section ul li {
@@ -33,6 +42,7 @@
   color: var(--dvdLightBlue);
   padding: 1rem;
   border-radius: 5px;
+  min-width: 15rem;
 }
 
 #movies-section ul li:hover {
@@ -81,17 +91,25 @@
   background-color: var(--dvdDangerMediumRed);
 }
 
+#movies-section h2 {
+  font-family: "El Messiri", sans-serif;
+  font-size: 2rem;
+  color: black;
+  border-bottom: 2px solid var(--dvdDarkBlue);
+  margin: 6rem auto auto auto;
+}
+
 /* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
 
 /* ✘•| SMALL |•✘ */
-@media only screen and (min-width: 501px) and (max-width: 767px) {
+@media only screen and (min-width: 651px) and (max-width: 1100px) {
   #movies-section ul {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 /* ✘•| MOBILE |•✘ */
-@media only screen and (min-width: 0px) and (max-width: 500px) {
+@media only screen and (min-width: 0px) and (max-width: 650px) {
   #movies-section ul {
     grid-template-columns: 1fr;
   }
