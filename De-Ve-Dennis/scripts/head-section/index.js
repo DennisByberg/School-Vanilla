@@ -61,5 +61,11 @@ function addToCollection() {
   });
 }
 
+function searchMovie() {
+  searchMovieButton.addEventListener("click", () => {
+    console.log("hello");
+  });
+}
+
 // Exports...
-export { addToCollection, toggler };
+export { addToCollection, toggler, searchMovie };

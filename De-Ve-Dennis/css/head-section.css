@@ -27,10 +27,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 75vw;
   max-width: 600px;
-  min-height: 80vh;
-  margin: auto auto 2rem auto;
+  min-height: 500px;
+  margin: auto auto auto auto;
   transition: 1s;
 }
 
@@ -60,7 +59,7 @@
 #head-section .label-and-input-container input {
   font-size: 15px;
   border: none;
-  border-bottom: 1px solid var(--dvdLightBlue);
+  border-bottom: 1px solid rgb(73, 73, 73);
   background: transparent;
   padding: 0.4rem 1rem;
   text-align: center;
@@ -95,7 +94,7 @@
   color: var(--dvdOrangeYellow);
   margin: 0rem auto 2rem auto;
   padding: 0.5rem;
-  border-bottom: 1px solid var(--dvdLightBlue);
+  border-bottom: 1px solid rgb(73, 73, 73);
   min-width: 7rem;
   max-width: 9rem;
   font-family: "Dancing Script", cursive;
