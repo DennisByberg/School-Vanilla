@@ -57,9 +57,12 @@ import { printAllMoviesToUl } from "./movie-section/index.js";
 const image = document
   .querySelector("#logo-img")
   .addEventListener("click", () => {
-    const num1 = Math.floor(Math.random() * 1000);
-    const num2 = Math.floor(Math.random() * 1000);
-    saveToDatabase(`Test Name ${num1}`, `Test Genre ${num2}`, "1994-01-01");
+    const rndNumber = Math.floor(Math.random() * 1000);
+    saveToDatabase(
+      `Test Name ${rndNumber}`,
+      `Test Genre ${rndNumber}`,
+      "1994-01-01"
+    );
     printAllMoviesToUl();
   });
 
