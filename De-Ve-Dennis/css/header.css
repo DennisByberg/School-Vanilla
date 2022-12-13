@@ -5,7 +5,6 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: 4rem;
   user-select: none;
 }
@@ -54,4 +53,32 @@ header #site-name-txt:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
+}
+
+/* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
+
+/* ✘•| SMALL |•✘ */
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+  /* DE-VE-DENNIS */
+  header #site-name-txt {
+    font-size: 27px;
+  }
+  /* MOVIES I WANT TO SEE ANCHOR */
+  #movies-i-want-to-see-txt,
+  #go-to-top {
+    font-size: 11px;
+  }
+}
+
+/* ✘•| MOBILE |•✘ */
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  /* DE-VE-DENNIS */
+  header #site-name-txt {
+    font-size: 25px;
+  }
+  /* MOVIES I WANT TO SEE ANCHOR */
+  #movies-i-want-to-see-txt,
+  #go-to-top {
+    font-size: 10px;
+  }
 }
