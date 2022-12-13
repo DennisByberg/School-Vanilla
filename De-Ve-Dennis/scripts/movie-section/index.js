@@ -4,10 +4,11 @@ const moviesUl = document.querySelector("#movies-section ul");
 
 async function printAllMoviesToUl() {
   const movies = await getAllMovies();
-  // clean Ul before printing it if updated...
   moviesUl.textContent = "";
-  movies.forEach((movie) => {
-    const liTemplate = `
+  if (movies.size > 0) {
+    // clean Ul before printing it if updated...
+    movies.forEach((movie) => {
+      const liTemplate = `
     <div class="movie-container">
       <button data-movie-id="${movie.id}" class="delete-btn">X</button>
       <li>
@@ -17,9 +18,16 @@ async function printAllMoviesToUl() {
       </li>
     </div>
     `;
-    moviesUl.insertAdjacentHTML("beforeend", liTemplate);
-  });
-  addDeleteOnClick();
+      moviesUl.insertAdjacentHTML("beforeend", liTemplate);
+    });
+    addDeleteOnClick();
+  } else {
+    printNoMoviesInDB();
+  }
+}
+
+function printNoMoviesInDB() {
+  moviesUl.innerHTML = `<p>Whoops... The list is empty</p>`;
 }
 
 function addDeleteOnClick() {
