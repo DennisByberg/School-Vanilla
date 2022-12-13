@@ -21,15 +21,17 @@
 
 #head-section article {
   box-shadow: 0 0 15px var(--dvdMediumBlue);
-  padding: 4rem;
+  padding: 3rem;
   background: rgba(0, 0, 0, 0.822);
   border-radius: 50px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 80vw;
-  max-width: 700px;
-  margin: 0 auto auto auto;
+  width: 75vw;
+  max-width: 600px;
+  min-height: 80vh;
+  margin: auto auto 2rem auto;
+  transition: 1s;
 }
 
 /* BOTH LABEL AND INPUT */
@@ -37,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 /* LABEL SETTINGS */
@@ -67,8 +69,9 @@
   outline: none;
 }
 
-/* "ADD TO COLLECTION" BUTTON SETTINGS */
-#head-section article button {
+/* "ADD AND SEARCH" BUTTONS */
+#search-btn,
+#add-btn {
   font-family: "El Messiri", sans-serif;
   font-size: 17px;
   padding: 0.5rem 1rem;
@@ -76,11 +79,27 @@
   border-radius: 100px;
 }
 
+#search-btn {
+  display: none;
+  background-color: var(--dvdPink);
+}
+
 /* "ADD TO COLLECTION" BUTTON SETTINGS HOVER */
 #head-section article button:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
+}
+
+#add-or-search-txt {
+  color: var(--dvdOrangeYellow);
+  margin: 0rem auto 2rem auto;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dvdLightBlue);
+  min-width: 7rem;
+  max-width: 9rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
 }
 
 /* CALENDER COLOR */
