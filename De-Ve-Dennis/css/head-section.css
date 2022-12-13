@@ -51,7 +51,7 @@
   font-size: 2rem;
   color: black;
   border-bottom: 2px solid var(--dvdDarkBlue);
-  margin: 6rem auto 5rem auto;
+  margin: 6rem auto auto auto;
 }
 
 /* INPUT SETTINGS */
