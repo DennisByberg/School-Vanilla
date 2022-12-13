@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/head-section.css" />
     <link rel="stylesheet" href="./css/movies-section.css" />
+    <link rel="stylesheet" href="./css/toggleButton.css" />
     <!-- SCRIPT -->
     <script defer src="./scripts/app.js" type="module"></script>
     <!-- FAVICON -->
@@ -31,8 +32,13 @@
     </header>
     <main>
       <section id="head-section">
-        <h2>ADD A MOVIE</h2>
         <article>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <p id="add-or-search-txt">Add Movie</p>
           <div class="label-and-input-container">
             <label id="name-txt">NAME</label>
             <input
@@ -42,7 +48,7 @@
             />
           </div>
           <div class="label-and-input-container">
-            <label id="movie-txt">GENRE</label>
+            <label id="genre-txt">GENRE</label>
             <input
               id="genre-input"
               type="text"
@@ -57,7 +63,8 @@
               placeholder="Enter date here..."
             />
           </div>
-          <button id="add-btn">Add To Collection</button>
+          <button id="add-btn">Add Movie</button>
+          <button id="search-btn">Search Movie</button>
         </article>
       </section>
       <section id="movies-section">
