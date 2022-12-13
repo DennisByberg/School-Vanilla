@@ -15,6 +15,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 #head-section article {
@@ -27,6 +29,7 @@
   text-align: center;
   width: 80vw;
   max-width: 700px;
+  margin: 0 auto auto auto;
 }
 
 /* BOTH LABEL AND INPUT */
@@ -41,6 +44,14 @@
 #head-section article .label-and-input-container label {
   color: var(--dvdLightBlue);
   margin-bottom: 0.7rem;
+}
+
+#head-section h2 {
+  font-family: "El Messiri", sans-serif;
+  font-size: 2rem;
+  color: black;
+  border-bottom: 2px solid var(--dvdDarkBlue);
+  margin: 6rem auto 5rem auto;
 }
 
 /* INPUT SETTINGS */
@@ -80,4 +91,14 @@
 /* CALENDER ON HOVER */
 ::-webkit-calendar-picker-indicator:hover {
   cursor: pointer;
+}
+
+/* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
+
+/* ✘•| SMALL |•✘ */
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+}
+
+/* ✘•| MOBILE |•✘ */
+@media only screen and (min-width: 0px) and (max-width: 500px) {
 }
