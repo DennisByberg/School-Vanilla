@@ -20,7 +20,7 @@
   list-style: none;
   border-radius: 15px;
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   border: 3px solid black;
   overflow-y: scroll;
@@ -97,6 +97,15 @@
   color: black;
   border-bottom: 2px solid var(--dvdDarkBlue);
   margin: 6rem auto auto auto;
+  user-select: none;
+}
+
+#movies-section #no-movies-to-see-txt {
+  margin: 0 auto auto auto;
+  border-right: 2px solid var(--dvdDarkBlue);
+  border-left: 2px solid var(--dvdDarkBlue);
+  padding: 1rem;
+  user-select: none;
 }
 
 /* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
