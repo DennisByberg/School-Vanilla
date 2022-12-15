@@ -1,4 +1,5 @@
-import { getAllMoviesFromDatabase, removeFromDatabase } from "../firebase.js"; // database.
+import { getAllMoviesFromDatabase, removeFromDatabase } from "../firebase.js"; //db.
+import { resetUl, printNoMoviesInDB } from "./displayHandler.js";
 
 const moviesUl = document.querySelector("#movies-section ul");
 const noMoviesPTag = document.querySelector("#no-movies-to-see-txt");
@@ -8,7 +9,6 @@ async function printAllMoviesToUl() {
   resetUl();
 
   if (movies.size > 0) {
-    // clean Ul before printing it if updated...
     movies.forEach((movie) => {
       const liTemplate = `
       <div class="movie-container">
@@ -28,17 +28,6 @@ async function printAllMoviesToUl() {
   }
 }
 
-function printNoMoviesInDB() {
-  moviesUl.style.display = "none";
-  noMoviesPTag.style.display = "flex";
-}
-
-function resetUl() {
-  moviesUl.style.display = "grid";
-  moviesUl.textContent = "";
-  noMoviesPTag.style.display = "none";
-}
-
 function addDeleteOnClick() {
   const allButtons = document.querySelectorAll("#movies-section ul button");
 
@@ -50,4 +39,9 @@ function addDeleteOnClick() {
     });
   });
 }
+
+// Export : functions.
 export { printAllMoviesToUl };
+
+// Export : Variables.
+export { moviesUl, noMoviesPTag };
