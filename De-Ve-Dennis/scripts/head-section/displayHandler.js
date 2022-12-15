@@ -1,15 +1,17 @@
-// inputs
-const genreInput = document.querySelector("#genre-input");
-const dateInput = document.querySelector("#date-input");
-// p
-const genreTxt = document.querySelector("#genre-txt");
-const releaseDateTxt = document.querySelector("#date-txt");
-const addOrSearchTxt = document.querySelector("#add-or-search-txt");
-// buttons
-const addMovieButton = document.querySelector("#add-btn");
-const searchMovieButton = document.querySelector("#search-btn");
-// articles
+import {
+  nameInput,
+  genreInput,
+  addOrSearchTxt,
+  addMovieButton,
+  searchMovieButton,
+  dateInput,
+} from "./index.js";
+
+// articles...
 const headSectionArticle = document.querySelector("#head-section article");
+// p.
+const releaseDateTxt = document.querySelector("#date-txt");
+const genreTxt = document.querySelector("#genre-txt");
 
 function displaySearch() {
   addOrSearchTxt.textContent = "Search Movie";
@@ -33,4 +35,14 @@ function displayAdd() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdMediumBlue)";
 }
 
-export { displayAdd, displaySearch };
+function clearAddInputs() {
+  nameInput.value = "";
+  genreInput.value = "";
+  dateInput.value = "";
+}
+
+function clearSearchInput() {
+  nameInput.value = "";
+}
+
+export { displayAdd, displaySearch, clearAddInputs, clearSearchInput };
