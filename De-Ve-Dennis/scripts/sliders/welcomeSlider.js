@@ -1,8 +1,12 @@
+const body = document.querySelector("body");
+
 function toggleWelcomeSlider() {
+  body.style.overflowY = "hidden";
   setTimeout(() => {
     welcomeSlider.classList.toggle("hide");
     displayNone();
-  }, 4000);
+    body.style.overflowY = null;
+  }, 5000);
 }
 
 function displayNone() {
