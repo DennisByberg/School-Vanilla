@@ -3,6 +3,8 @@ import { printAllMoviesToUl } from "../movie-section/index.js";
 import {
   displayAdd,
   displaySearch,
+  displayNotFound,
+  displayFound,
   clearAddInputs,
   clearSearchInput,
 } from "./displayHandler.js";
@@ -50,9 +52,9 @@ function searchMovie() {
       convertInput(nameInput.value)
     );
     if (result.size > 0) {
-      console.log("Found it!");
+      displayFound();
     } else {
-      console.log("Can't find it!");
+      displayNotFound();
     }
     clearSearchInput();
   });
