@@ -1,0 +1,53 @@
+#welcomeSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(43, 43, 43));
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  transition: 5s;
+  color: white;
+}
+
+#welcomeSlider.hide {
+  /* transform: translateX(200%); */
+  animation: fadeOut ease 1s;
+}
+
+#welcomeSlider.display-none {
+  display: none;
+}
+
+/* DVD-LOGO */
+main #welcome-logo-img {
+  margin: 0 0.3rem;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* This code is learned from here: https://codepen.io/teerapuch/pen/vLJXeR */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* This code is learned from here: https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08 */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
