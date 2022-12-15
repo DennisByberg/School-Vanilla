@@ -11,6 +11,15 @@ header {
 header #logo-img {
   width: 3rem;
   margin: 0 0.3rem;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+header #logo-img:hover {
+  animation-duration: 400ms;
+  cursor: pointer;
 }
 
 /* DE-VE-DENNIS */
@@ -51,6 +60,15 @@ header #site-name-txt:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
   color: white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
