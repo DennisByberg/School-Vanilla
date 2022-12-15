@@ -7,8 +7,8 @@ import {
   getDocs,
   deleteDoc,
   doc,
-  // query,
-  // where,
+  query,
+  where,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 // Maybe i need to hide this info...?
@@ -38,7 +38,7 @@ async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
 }
 
 // 2/x DB Functions | This one gets all movies from the database so we can loop it out or do something else with the info.
-async function getAllMovies(savedMovies) {
+async function getAllMoviesFromDatabase(savedMovies) {
   savedMovies = await getDocs(collection(db, "Movies"));
   return savedMovies;
 }
@@ -67,4 +67,4 @@ const image = document
   });
 
 // Exports...
-export { saveToDatabase, getAllMovies, removeFromDatabase };
+export { saveToDatabase, getAllMoviesFromDatabase, removeFromDatabase };

@@ -1,10 +1,10 @@
-import { getAllMovies, removeFromDatabase } from "../firebase.js";
+import { getAllMoviesFromDatabase, removeFromDatabase } from "../firebase.js";
 
 const moviesUl = document.querySelector("#movies-section ul");
 const noMoviesPTag = document.querySelector("#no-movies-to-see-txt");
 
 async function printAllMoviesToUl() {
-  const movies = await getAllMovies();
+  const movies = await getAllMoviesFromDatabase();
   resetUl();
 
   if (movies.size > 0) {
