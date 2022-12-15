@@ -24,7 +24,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig); // app.
 const db = getFirestore(app); // db.
 
-// 1/x DB Functions | This one saves movieName : "String", movieGenre : "String" and movieReleaseDate "String" and stores/saves it in the Database.
+// 1/x DB Functions | This db-function saves movieName : "String", movieGenre : "String" and movieReleaseDate "String" and stores/saves it in the Database.
 async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
   try {
     await addDoc(collection(db, "Movies"), {
@@ -37,13 +37,13 @@ async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
   }
 }
 
-// 2/x DB Functions | This one gets all movies from the database so we can loop it out or do something else with the info.
+// 2/x DB Functions | This db-function gets all movies from the database so we can loop it out or do something else with the info.
 async function getAllMoviesFromDatabase(savedMovies) {
   savedMovies = await getDocs(collection(db, "Movies"));
   return savedMovies;
 }
 
-// 3/x DB Functions |
+// 3/x DB Functions | This db-function removes the given movieID from the database.
 async function removeFromDatabase(movieID) {
   try {
     await deleteDoc(doc(db, "Movies", movieID));
@@ -52,19 +52,21 @@ async function removeFromDatabase(movieID) {
   }
 }
 
-// Adds dummy data for testing purposes only... WILL GET DELETED LATER!
-import { printAllMoviesToUl } from "./movie-section/index.js";
-const image = document
-  .querySelector("#logo-img")
-  .addEventListener("click", () => {
-    const rndNumber = Math.floor(Math.random() * 1000);
-    saveToDatabase(
-      `Test Name ${rndNumber}`,
-      `Test Genre ${rndNumber}`,
-      "1994-01-01"
-    );
-    printAllMoviesToUl();
-  });
+//4/x DB Functions | this db function...
+async function checkIfNameAlreadyInDatabase(nameOfTheMovie) {
+  const movieName = nameOfTheMovie;
+  const movieQuery = query(
+    collection(db, "Movies"),
+    where("name", "==", movieName)
+  );
+  const result = await getDocs(movieQuery);
+  return result;
+}
 
 // Exports...
-export { saveToDatabase, getAllMoviesFromDatabase, removeFromDatabase };
+export {
+  saveToDatabase,
+  getAllMoviesFromDatabase,
+  removeFromDatabase,
+  checkIfNameAlreadyInDatabase,
+};

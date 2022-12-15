@@ -1,4 +1,4 @@
-import { getAllMoviesFromDatabase, removeFromDatabase } from "../firebase.js";
+import { getAllMoviesFromDatabase, removeFromDatabase } from "../firebase.js"; // database.
 
 const moviesUl = document.querySelector("#movies-section ul");
 const noMoviesPTag = document.querySelector("#no-movies-to-see-txt");
