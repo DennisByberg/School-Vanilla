@@ -1,6 +1,11 @@
-import { saveToDatabase, checkIfNameAlreadyInDatabase } from "../firebase.js"; // database.
+import { saveToDatabase, checkIfNameAlreadyInDatabase } from "../firebase.js"; //db.
 import { printAllMoviesToUl } from "../movie-section/index.js";
-import { displayAdd, displaySearch } from "./displayHandler.js";
+import {
+  displayAdd,
+  displaySearch,
+  clearAddInputs,
+  clearSearchInput,
+} from "./displayHandler.js";
 
 // inputs
 const nameInput = document.querySelector("#name-input");
@@ -17,44 +22,68 @@ const toggleSwitch = document.querySelector(".slider");
 function toggler() {
   toggleSwitch.addEventListener("click", () => {
     if (addOrSearchTxt.textContent === "Add Movie") {
+      clearAddInputs();
       displaySearch();
     } else {
+      clearSearchInput();
       displayAdd();
     }
   });
 }
 
-// Adds dummy data for testing purposes only...
-const image = document
-  .querySelector("#logo-img")
-  .addEventListener("click", () => {
-    const rndNumber = Math.floor(Math.random() * 1000);
-    saveToDatabase(
-      `Test Name ${rndNumber}`,
-      `Test Genre ${rndNumber}`,
-      "1994-01-01"
-    );
-    printAllMoviesToUl();
-  });
-
 // This function activates when you click the "Add To Collection Button" and saves name, genre and date and adds it to the db.
-function addToCollection() {
+function addMovie() {
   addMovieButton.addEventListener("click", () => {
-    saveToDatabase(nameInput.value, genreInput.value, dateInput.value);
+    saveToDatabase(
+      convertInput(nameInput.value),
+      convertInput(genreInput.value),
+      dateInput.value
+    );
+    clearAddInputs();
     printAllMoviesToUl();
   });
 }
 
 function searchMovie() {
   searchMovieButton.addEventListener("click", async () => {
-    const result = await checkIfNameAlreadyInDatabase(nameInput.value);
+    const result = await checkIfNameAlreadyInDatabase(
+      convertInput(nameInput.value)
+    );
     if (result.size > 0) {
       console.log("Found it!");
     } else {
       console.log("Can't find it!");
     }
+    clearSearchInput();
   });
 }
 
-// Exports...
-export { addToCollection, toggler, searchMovie };
+function convertInput(input) {
+  const lowerCaseName = input.toLowerCase();
+  const firstLetterCapitalized =
+    lowerCaseName.charAt(0).toUpperCase() + lowerCaseName.slice(1);
+  return firstLetterCapitalized;
+}
+
+// Adds dummy data for testing purposes only...
+document.querySelector("#logo-img").addEventListener("click", () => {
+  const rndNumber = Math.floor(Math.random() * 1000);
+  saveToDatabase(
+    `Test Name ${rndNumber}`,
+    `Test Genre ${rndNumber}`,
+    "1994-01-01"
+  );
+  printAllMoviesToUl();
+});
+
+// Export : Functions.
+export { addMovie, toggler, searchMovie };
+// Export : Variables.
+export {
+  nameInput,
+  genreInput,
+  dateInput,
+  addOrSearchTxt,
+  addMovieButton,
+  searchMovieButton,
+};
