@@ -7,9 +7,9 @@ import {
   dateInput,
 } from "./index.js";
 
-// articles...
+// articles not used @ index.js...
 const headSectionArticle = document.querySelector("#head-section article");
-// p.
+// p-tags not used @ index.js...
 const releaseDateTxt = document.querySelector("#date-txt");
 const genreTxt = document.querySelector("#genre-txt");
 
@@ -45,4 +45,37 @@ function clearSearchInput() {
   nameInput.value = "";
 }
 
-export { displayAdd, displaySearch, clearAddInputs, clearSearchInput };
+function displayFound() {
+  headSectionArticle.style.boxShadow = "0 0 15px var(--dvdSuccessGreen)";
+  searchMovieButton.textContent = "MOVIE FOUND";
+  searchMovieButton.style.backgroundColor = "var(--dvdSuccessGreen)";
+  setTimeout(() => {
+    headSectionArticle.style.boxShadow = "0 0 15px var(--dvdPink)";
+    searchMovieButton.textContent = "Search Movie";
+    searchMovieButton.style.backgroundColor = "var(--dvdPink)";
+    window.location.scrollTo(0, document.body.scrollHeight);
+  }, 2500);
+}
+
+function displayNotFound() {
+  headSectionArticle.style.boxShadow = "0 0 20px var(--dvdDangerDarkRed)";
+  searchMovieButton.textContent = "NOT FOUND";
+  searchMovieButton.style.backgroundColor = "var(--dvdDangerDarkRed)";
+  searchMovieButton.style.color = "white";
+  setTimeout(() => {
+    headSectionArticle.style.boxShadow = "0 0 15px var(--dvdPink)";
+    searchMovieButton.textContent = "Search Movie";
+    searchMovieButton.style.backgroundColor = "var(--dvdPink)";
+    searchMovieButton.style.color = black;
+    window.location.scrollTo(0, document.body.scrollHeight);
+  }, 2500);
+}
+
+export {
+  displayAdd,
+  displaySearch,
+  displayNotFound,
+  displayFound,
+  clearAddInputs,
+  clearSearchInput,
+};
