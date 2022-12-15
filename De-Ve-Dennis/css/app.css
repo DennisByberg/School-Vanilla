@@ -9,8 +9,10 @@
   --dvdLightBlue: #a3cef2;
   --dvdDangerLightRed: rgb(255, 144, 144);
   --dvdDangerMediumRed: rgb(255, 96, 96);
+  --dvdDangerDarkRed: rgb(211, 34, 34);
   --dvdOrangeYellow: rgb(255, 189, 67);
   --dvdPink: rgb(255, 69, 202);
+  --dvdSuccessGreen: rgb(0, 255, 0);
 }
 
 * {
