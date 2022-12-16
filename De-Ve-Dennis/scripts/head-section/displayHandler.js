@@ -45,6 +45,28 @@ function clearSearchInput() {
   nameInput.value = "";
 }
 
+function displayAddFailed() {
+  headSectionArticle.style.boxShadow = "0 0 20px var(--dvdDangerDarkRed)";
+  addMovieButton.style.backgroundColor = "var(--dvdDangerDarkRed)";
+  addMovieButton.textContent = "INVALID INPUT(s)";
+  setTimeout(() => {
+    headSectionArticle.style.boxShadow = "0 0 15px var(--dvdMediumBlue)";
+    addMovieButton.style.backgroundColor = "var(--dvdMediumBlue)";
+    addMovieButton.textContent = "Add Movie";
+  }, 2500);
+}
+
+function displayAddSucceed() {
+  headSectionArticle.style.boxShadow = "0 0 15px var(--dvdSuccessGreen)";
+  addMovieButton.style.backgroundColor = "var(--dvdSuccessGreen)";
+  addMovieButton.textContent = "ADDED MOVIE";
+  setTimeout(() => {
+    headSectionArticle.style.boxShadow = "0 0 15px var(--dvdMediumBlue)";
+    addMovieButton.style.backgroundColor = "var(--dvdMediumBlue)";
+    addMovieButton.textContent = "Add Movie";
+  }, 2500);
+}
+
 function displayFound() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdSuccessGreen)";
   searchMovieButton.textContent = "MOVIE FOUND";
@@ -53,7 +75,6 @@ function displayFound() {
     headSectionArticle.style.boxShadow = "0 0 15px var(--dvdPink)";
     searchMovieButton.textContent = "Search Movie";
     searchMovieButton.style.backgroundColor = "var(--dvdPink)";
-    window.location.scrollTo(0, document.body.scrollHeight);
   }, 2500);
 }
 
@@ -66,8 +87,7 @@ function displayNotFound() {
     headSectionArticle.style.boxShadow = "0 0 15px var(--dvdPink)";
     searchMovieButton.textContent = "Search Movie";
     searchMovieButton.style.backgroundColor = "var(--dvdPink)";
-    searchMovieButton.style.color = black;
-    window.location.scrollTo(0, document.body.scrollHeight);
+    searchMovieButton.style.color = "black";
   }, 2500);
 }
 
@@ -76,6 +96,8 @@ export {
   displaySearch,
   displayNotFound,
   displayFound,
+  displayAddSucceed,
+  displayAddFailed,
   clearAddInputs,
   clearSearchInput,
 };
