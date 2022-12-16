@@ -6,9 +6,9 @@ import { devTips } from "./footer-section/index.js";
 // ON START...
 toggleWelcomeSlider();
 printAllMoviesToUl();
-devTips();
 
 // ON CLICK EVENTS...
 addMovie();
 searchMovie();
 toggler();
+devTips();
