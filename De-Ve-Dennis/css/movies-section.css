@@ -1,11 +1,8 @@
 #movies-section {
   background-image: url("https://preview.redd.it/qy6yza81tln61.png?auto=webp&s=03e12e6488313d6b3bbe6280d6b6a1624f1e8ce5");
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 100vh;
   width: 100vw;
   display: flex;

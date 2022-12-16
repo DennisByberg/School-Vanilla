@@ -1,3 +1,9 @@
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+// This is the firebase module. Here my main focus is to only write
+// code that we can use in several different places without rewriting the function.
+// As you can see, we can call it at different places by only give the function a movieID for example.
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+
 // NOTE: version 15.0
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
@@ -24,7 +30,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig); // app.
 const db = getFirestore(app); // db.
 
-// 1/x DB Functions | This db-function saves movieName : "String", movieGenre : "String" and movieReleaseDate "String" and stores/saves it in the Database.
+// 1/4 DB Functions | Saves movieName : "String", movieGenre : "String" and movieReleaseDate "String" and stores/saves it in the Database.
 async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
   try {
     await addDoc(collection(db, "Movies"), {
@@ -37,13 +43,13 @@ async function saveToDatabase(movieName, movieGenre, movieReleaseDate) {
   }
 }
 
-// 2/x DB Functions | This db-function gets all movies from the database so we can loop it out or do something else with the info.
+// 2/4 DB Functions | Gets all movies from the database so we can loop it out or do something else with the info.
 async function getAllMoviesFromDatabase(savedMovies) {
   savedMovies = await getDocs(collection(db, "Movies"));
   return savedMovies;
 }
 
-// 3/x DB Functions | This db-function removes the given movieID from the database.
+// 3/4 DB Functions | Removes the given movieID from the database.
 async function removeFromDatabase(movieID) {
   try {
     await deleteDoc(doc(db, "Movies", movieID));
@@ -52,7 +58,7 @@ async function removeFromDatabase(movieID) {
   }
 }
 
-//4/x DB Functions | this db function...
+//4/4 DB Functions | Checks if the name of the given movie already contains in the database and return a result that we can use.
 async function checkIfNameAlreadyInDatabase(nameOfTheMovie) {
   const movieName = nameOfTheMovie;
   const movieQuery = query(
@@ -63,7 +69,7 @@ async function checkIfNameAlreadyInDatabase(nameOfTheMovie) {
   return result;
 }
 
-// Exports...
+// Exports : Functions...
 export {
   saveToDatabase,
   getAllMoviesFromDatabase,

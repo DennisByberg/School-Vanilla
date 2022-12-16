@@ -1,3 +1,10 @@
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+// Here I have all the functional code for the head section which is 1 of 2 pages I have.
+// Here I import functions from a styling module that is in the same folder called...
+// ... displayHandler and i also import database functions from the firebase module...
+// ...if I need to change something in the database.
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+
 import { saveToDatabase, checkIfNameAlreadyInDatabase } from "../firebase.js"; //db.
 import { printAllMoviesToUl } from "../movie-section/index.js";
 import {
@@ -11,18 +18,18 @@ import {
   clearSearchInput,
 } from "./displayHandler.js";
 
-// inputs
+// <input>'s...
 const nameInput = document.querySelector("#name-input");
 const genreInput = document.querySelector("#genre-input");
 const dateInput = document.querySelector("#date-input");
-// p
+// <p>'s...
 const addOrSearchTxt = document.querySelector("#add-or-search-txt");
-// buttons
+// <button>'s
 const addMovieButton = document.querySelector("#add-btn");
 const searchMovieButton = document.querySelector("#search-btn");
 const toggleSwitch = document.querySelector(".slider");
 
-// Toggler
+// Toggle the head-section toggler back and fourth between two stages. "ADD MOVIE" and "SEARCH MOVIE".
 function toggler() {
   toggleSwitch.addEventListener("click", () => {
     if (addOrSearchTxt.textContent === "Add Movie") {
@@ -35,7 +42,7 @@ function toggler() {
   });
 }
 
-// This function activates when you click the "Add To Collection Button" and saves name, genre and date and adds it to the db.
+// Checks if name input & genre input is filled. Saves all 3 inputs into the db if input is correct. Clears inputs and updates movie list.
 function addMovie() {
   addMovieButton.addEventListener("click", () => {
     if (nameInput.value === "" || genreInput.value === "") {
@@ -53,6 +60,7 @@ function addMovie() {
   });
 }
 
+// Checks if the name in the input exists in the database and display if yes or no then clearing the name input value.
 function searchMovie() {
   searchMovieButton.addEventListener("click", async () => {
     const result = await checkIfNameAlreadyInDatabase(
@@ -67,6 +75,7 @@ function searchMovie() {
   });
 }
 
+// Converts given input to first letter capitalized and the rest lowercase to get a standard in app.
 function convertInput(input) {
   const lowerCaseName = input.toLowerCase();
   const firstLetterCapitalized =
@@ -85,9 +94,9 @@ document.querySelector("#logo-img").addEventListener("click", () => {
   printAllMoviesToUl();
 });
 
-// Export : Functions.
+// Exports : Functions.
 export { addMovie, toggler, searchMovie };
-// Export : Variables.
+// Exports : Variables.
 export {
   nameInput,
   genreInput,

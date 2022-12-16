@@ -1,3 +1,7 @@
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+// Nothing but styling changes for the head-section in this module.
+// ❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑❑
+
 import {
   nameInput,
   genreInput,
@@ -13,6 +17,7 @@ const headSectionArticle = document.querySelector("#head-section article");
 const releaseDateTxt = document.querySelector("#date-txt");
 const genreTxt = document.querySelector("#genre-txt");
 
+// Only styling changes.
 function displaySearch() {
   addOrSearchTxt.textContent = "Search Movie";
   genreTxt.style.display = "none";
@@ -24,6 +29,7 @@ function displaySearch() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdPink)";
 }
 
+// Only styling changes.
 function displayAdd() {
   addOrSearchTxt.textContent = "Add Movie";
   genreTxt.style.display = "flex";
@@ -35,16 +41,19 @@ function displayAdd() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdMediumBlue)";
 }
 
+// Clear all input values in the "Add Movie / Search Movie" inputs.
 function clearAddInputs() {
   nameInput.value = "";
   genreInput.value = "";
   dateInput.value = "";
 }
 
+// Clear only the name input value in the "Add Movie / Search Movie" inputs.
 function clearSearchInput() {
   nameInput.value = "";
 }
 
+// Only styling changes.
 function displayAddFailed() {
   headSectionArticle.style.boxShadow = "0 0 20px var(--dvdDangerDarkRed)";
   addMovieButton.style.backgroundColor = "var(--dvdDangerDarkRed)";
@@ -55,7 +64,7 @@ function displayAddFailed() {
     addMovieButton.textContent = "Add Movie";
   }, 2500);
 }
-
+// Only styling changes.
 function displayAddSucceed() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdSuccessGreen)";
   addMovieButton.style.backgroundColor = "var(--dvdSuccessGreen)";
@@ -66,7 +75,7 @@ function displayAddSucceed() {
     addMovieButton.textContent = "Add Movie";
   }, 2500);
 }
-
+// Only styling changes.
 function displayFound() {
   headSectionArticle.style.boxShadow = "0 0 15px var(--dvdSuccessGreen)";
   searchMovieButton.textContent = "MOVIE FOUND";
@@ -78,6 +87,7 @@ function displayFound() {
   }, 2500);
 }
 
+// Only styling changes.
 function displayNotFound() {
   headSectionArticle.style.boxShadow = "0 0 20px var(--dvdDangerDarkRed)";
   searchMovieButton.textContent = "NOT FOUND";
@@ -91,6 +101,7 @@ function displayNotFound() {
   }, 2500);
 }
 
+// Exports : Functions...
 export {
   displayAdd,
   displaySearch,

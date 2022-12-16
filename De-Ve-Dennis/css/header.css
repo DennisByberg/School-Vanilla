@@ -7,7 +7,6 @@ header {
   user-select: none;
 }
 
-/* DVD-LOGO */
 header #logo-img {
   width: 3rem;
   margin: 0 0.3rem;
@@ -22,7 +21,6 @@ header #logo-img:hover {
   cursor: pointer;
 }
 
-/* DE-VE-DENNIS */
 header #site-name-txt {
   font-family: "El Messiri", sans-serif;
   font-size: 30px;
@@ -36,7 +34,6 @@ header #site-name-txt:hover {
   transform: scale(1.01);
 }
 
-/* MOVIES I WANT TO SEE ANCHOR */
 #movies-i-want-to-see-txt,
 #go-to-top {
   font-family: "El Messiri", sans-serif;
@@ -54,7 +51,6 @@ header #site-name-txt:hover {
   border-radius: 100px;
 }
 
-/* MOVIES I WANT TO SEE ANCHOR:HOVER */
 #movies-i-want-to-see-txt:hover,
 #go-to-top:hover {
   cursor: pointer;
@@ -74,11 +70,10 @@ header #site-name-txt:hover {
 /* .·:*¨ ✘•|  MEDIA QUERY  |•✘ ¨*:·.  */
 /* ✘•| SMALL |•✘ */
 @media only screen and (min-width: 501px) and (max-width: 767px) {
-  /* DE-VE-DENNIS */
   header #site-name-txt {
     font-size: 27px;
   }
-  /* MOVIES I WANT TO SEE ANCHOR */
+
   #movies-i-want-to-see-txt,
   #go-to-top {
     font-size: 11px;
@@ -87,11 +82,10 @@ header #site-name-txt:hover {
 
 /* ✘•| MOBILE |•✘ */
 @media only screen and (min-width: 0px) and (max-width: 500px) {
-  /* DE-VE-DENNIS */
   header #site-name-txt {
     font-size: 25px;
   }
-  /* MOVIES I WANT TO SEE ANCHOR */
+
   #movies-i-want-to-see-txt,
   #go-to-top {
     font-size: 10px;

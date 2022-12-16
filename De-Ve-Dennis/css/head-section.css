@@ -5,11 +5,7 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-
-  /* The image used */
   background-image: url("https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-black-dark-mode-layers-5k-2880x1800-5889.jpg");
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,11 +23,10 @@
   text-align: center;
   max-width: 600px;
   min-height: 500px;
-  margin: auto auto auto auto;
+  margin: auto;
   transition: 0.3s;
 }
 
-/* BOTH LABEL AND INPUT */
 #head-section article .label-and-input-container {
   display: flex;
   flex-direction: column;
@@ -39,7 +34,6 @@
   margin: 1rem auto;
 }
 
-/* LABEL SETTINGS */
 #head-section article .label-and-input-container label {
   color: var(--dvdLightBlue);
   margin-bottom: 0.7rem;
@@ -53,7 +47,6 @@
   margin: 6rem auto auto auto;
 }
 
-/* INPUT SETTINGS */
 #head-section .label-and-input-container input {
   font-size: 15px;
   border: none;
@@ -66,7 +59,6 @@
   outline: none;
 }
 
-/* "ADD AND SEARCH" BUTTONS */
 #search-btn,
 #add-btn {
   font-family: "El Messiri", sans-serif;
@@ -81,7 +73,6 @@
   background-color: var(--dvdPink);
 }
 
-/* "ADD TO COLLECTION" BUTTON SETTINGS HOVER */
 #head-section article button:hover {
   cursor: pointer;
   background-color: var(--dvdDarkBlue);
