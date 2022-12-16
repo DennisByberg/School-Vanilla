@@ -5,6 +5,8 @@ import {
   displaySearch,
   displayNotFound,
   displayFound,
+  displayAddFailed,
+  displayAddSucceed,
   clearAddInputs,
   clearSearchInput,
 } from "./displayHandler.js";
@@ -36,11 +38,16 @@ function toggler() {
 // This function activates when you click the "Add To Collection Button" and saves name, genre and date and adds it to the db.
 function addMovie() {
   addMovieButton.addEventListener("click", () => {
-    saveToDatabase(
-      convertInput(nameInput.value),
-      convertInput(genreInput.value),
-      dateInput.value
-    );
+    if (nameInput.value === "" || genreInput.value === "") {
+      displayAddFailed();
+    } else {
+      displayAddSucceed();
+      saveToDatabase(
+        convertInput(nameInput.value),
+        convertInput(genreInput.value),
+        dateInput.value
+      );
+    }
     clearAddInputs();
     printAllMoviesToUl();
   });
