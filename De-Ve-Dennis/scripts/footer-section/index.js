@@ -1,6 +1,9 @@
+//p-tags...
 const p = document.querySelector("footer p");
+//img-s...
 const questionIMG = document.querySelector("footer img");
 
+/* This functions is triggered when you click the question-img in the bottom left corner. It will change the "Developer?" - text to a tip for the developers who are lazy  */
 function devTips() {
   questionIMG.addEventListener("click", () => {
     p.textContent = "Click the spinning CD on the top left to add test movies!";
@@ -10,4 +13,5 @@ function devTips() {
   });
 }
 
+// Exports : Functions.
 export { devTips };
